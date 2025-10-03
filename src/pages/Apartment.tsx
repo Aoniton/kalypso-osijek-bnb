@@ -2,6 +2,9 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import livingArea from "@/assets/living-area.jpg";
+import bedroom from "@/assets/bedroom.jpg";
+import livingRoom from "@/assets/living-room.jpg";
 
 const Apartment = () => {
   const [language, setLanguage] = useState<"en" | "hr">("en");
@@ -72,25 +75,31 @@ const Apartment = () => {
 
               <div className="grid gap-4 animate-slide-in-right">
                 <Card className="overflow-hidden shadow-luxury">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <p className="text-muted-foreground text-center px-8">
-                      [Living area photo placeholder]
-                    </p>
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={livingArea} 
+                      alt="Kalypso Osijek luxury living area" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </Card>
                 <div className="grid grid-cols-2 gap-4">
                   <Card className="overflow-hidden shadow-luxury">
-                    <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <p className="text-muted-foreground text-center px-4 text-sm">
-                        [Bedroom]
-                      </p>
+                    <div className="aspect-square overflow-hidden">
+                      <img 
+                        src={bedroom} 
+                        alt="Kalypso Osijek luxury bedroom" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </Card>
                   <Card className="overflow-hidden shadow-luxury">
-                    <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <p className="text-muted-foreground text-center px-4 text-sm">
-                        [Bathroom]
-                      </p>
+                    <div className="aspect-square overflow-hidden">
+                      <img 
+                        src={livingRoom} 
+                        alt="Kalypso Osijek living room" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </Card>
                 </div>
