@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Features from "@/components/Features";
 import { Card } from "@/components/ui/card";
-import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
-import finnishSauna from "@/assets/finnish-sauna.jpg";
+import jacuzziPurpleLights from "@/assets/jacuzzi-purple-lights.jpg";
+import saunaPhoto from "@/assets/sauna-photo.jpg";
 
 const Wellness = () => {
   const [language, setLanguage] = useState<"en" | "hr">("en");
@@ -44,8 +44,8 @@ const Wellness = () => {
               <Card className="overflow-hidden shadow-luxury animate-slide-in-left">
                 <div className="aspect-video overflow-hidden">
                   <img 
-                    src={jacuzziInterior} 
-                    alt="Kalypso Osijek luxury jacuzzi with ambient lighting" 
+                    src={jacuzziPurpleLights} 
+                    alt="Kalypso Osijek jacuzzi with purple LED lights" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -53,7 +53,7 @@ const Wellness = () => {
               <Card className="overflow-hidden shadow-luxury animate-slide-in-right">
                 <div className="aspect-video overflow-hidden">
                   <img 
-                    src={finnishSauna} 
+                    src={saunaPhoto} 
                     alt="Kalypso Osijek Finnish sauna interior" 
                     className="w-full h-full object-cover"
                   />
