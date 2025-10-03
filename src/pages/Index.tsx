@@ -7,7 +7,6 @@ import Gallery from "@/components/Gallery";
 import Location from "@/components/Location";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import aboutImage from "@/assets/about-kalypso.jpg";
 
 
 const Index = () => {
