@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Features from "@/components/Features";
 import { Card } from "@/components/ui/card";
+import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
+import finnishSauna from "@/assets/finnish-sauna.jpg";
 
 const Wellness = () => {
   const [language, setLanguage] = useState<"en" | "hr">("en");
@@ -40,17 +42,21 @@ const Wellness = () => {
 
             <div className="grid md:grid-cols-2 gap-6 mb-16">
               <Card className="overflow-hidden shadow-luxury animate-slide-in-left">
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <p className="text-muted-foreground text-center px-8">
-                    [Jacuzzi with purple LED lights photo]
-                  </p>
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={jacuzziInterior} 
+                    alt="Kalypso Osijek luxury jacuzzi with ambient lighting" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Card>
               <Card className="overflow-hidden shadow-luxury animate-slide-in-right">
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <p className="text-muted-foreground text-center px-8">
-                    [Finnish sauna interior photo]
-                  </p>
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={finnishSauna} 
+                    alt="Kalypso Osijek Finnish sauna interior" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Card>
             </div>
