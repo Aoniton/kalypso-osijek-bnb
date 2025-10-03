@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Features from "@/components/Features";
+import Gallery from "@/components/Gallery";
+import Location from "@/components/Location";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [language, setLanguage] = useState<"en" | "hr">("en");
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar language={language} onLanguageChange={setLanguage} />
+      <main>
+        <Hero language={language} />
+        <About language={language} />
+        <Features language={language} />
+        <Gallery language={language} />
+        <Location language={language} />
+        <Contact language={language} />
+      </main>
+      <Footer language={language} />
     </div>
   );
 };
