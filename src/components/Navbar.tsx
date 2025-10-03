@@ -41,25 +41,18 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
   };
 
   const isActive = (path: string) => location.pathname === path;
-  const isHomePage = location.pathname === "/";
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-md shadow-luxury" 
-          : isHomePage 
-            ? "bg-secondary/40 backdrop-blur-sm"
-            : "bg-background/95 backdrop-blur-md"
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-luxury" : "bg-background/95 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className={`text-2xl font-heading font-bold transition-colors ${
-            isScrolled ? "text-foreground" : "text-primary-foreground"
-          }`}>
-            <span className="text-accent">KALYPSO</span> <span className={isScrolled ? "text-foreground" : "text-primary-foreground"}>Osijek</span>
+          <Link to="/" className="text-2xl font-heading font-bold transition-colors">
+            <span className="text-accent">KALYPSO</span> <span className="text-primary-foreground">Osijek</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -69,7 +62,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                 key={item.path}
                 to={item.path}
                 className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isActive(item.path) ? "text-accent" : isScrolled ? "text-foreground" : "text-primary-foreground"
+                  isActive(item.path) ? "text-accent" : "text-primary-foreground"
                 }`}
               >
                 {item.label}
@@ -81,7 +74,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               variant="ghost"
               size="sm"
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
-              className={`hover:text-accent ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
+              className="hover:text-accent text-primary-foreground"
             >
               <Globe className="w-4 h-4 mr-2" />
               {language === "en" ? "HR" : "EN"}
@@ -91,7 +84,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden hover:text-accent transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
+            className="md:hidden hover:text-accent transition-colors text-primary-foreground"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -107,7 +100,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`text-sm font-medium transition-colors hover:text-accent ${
-                    isActive(item.path) ? "text-accent" : isScrolled ? "text-foreground" : "text-primary-foreground"
+                    isActive(item.path) ? "text-accent" : "text-primary-foreground"
                   }`}
                 >
                   {item.label}
@@ -120,7 +113,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   onLanguageChange(language === "en" ? "hr" : "en");
                   setIsOpen(false);
                 }}
-                className={`hover:text-accent justify-start ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
+                className="hover:text-accent justify-start text-primary-foreground"
               >
                 <Globe className="w-4 h-4 mr-2" />
                 {language === "en" ? "Hrvatski" : "English"}
