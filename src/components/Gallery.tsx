@@ -1,10 +1,11 @@
 import { Card } from "@/components/ui/card";
-import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
-import finnishSauna from "@/assets/finnish-sauna.jpg";
-import ledLighting from "@/assets/LED-ambient-lighting.jpg";
-import luxuryBedroom from "@/assets/luxury-bedroom.jpg";
-import romanticSetup from "@/assets/romantic-setup.jpg";
-import bathroomAmenities from "@/assets/bathroom-amenities.jpg";
+// Temporarily commented out - upload images to src/assets/ then uncomment
+// import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
+// import finnishSauna from "@/assets/finnish-sauna.jpg";
+// import ledLighting from "@/assets/LED-ambient-lighting.jpg";
+// import luxuryBedroom from "@/assets/luxury-bedroom.jpg";
+// import romanticSetup from "@/assets/romantic-setup.jpg";
+// import bathroomAmenities from "@/assets/bathroom-amenities.jpg";
 
 interface GalleryProps {
   language: "en" | "hr";
@@ -23,12 +24,12 @@ const Gallery = ({ language }: GalleryProps) => {
   };
 
   const images = [
-    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", aspectRatio: "aspect-[3/2]" },
-    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", aspectRatio: "aspect-square" },
-    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", aspectRatio: "aspect-square" },
-    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", aspectRatio: "aspect-[3/2]" },
-    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
-    { src: bathroomAmenities, alt: "Kalypso Osijek bathroom amenities", aspectRatio: "aspect-[4/3]" },
+    { src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800", alt: "Kalypso Osijek wellness jacuzzi interior", aspectRatio: "aspect-[3/2]" },
+    { src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800", alt: "Kalypso Osijek Finnish sauna", aspectRatio: "aspect-square" },
+    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800", alt: "Kalypso Osijek LED ambient lighting", aspectRatio: "aspect-square" },
+    { src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800", alt: "Kalypso Osijek luxury bedroom", aspectRatio: "aspect-[3/2]" },
+    { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800", alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
+    { src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800", alt: "Kalypso Osijek bathroom amenities", aspectRatio: "aspect-[4/3]" },
   ];
 
   return (
