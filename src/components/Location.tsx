@@ -13,13 +13,13 @@ const Location = ({ language }: LocationProps) => {
       address: "Vrt Jagode Truhelke 1, Osijek, Croatia",
       nearby: "Nearby Attractions",
       attractions: [
-        { name: "City Center", distance: "5 min walk" },
+        { name: "City Center", distance: "1 min walk" },
         { name: "Tvrđa (Old Town)", distance: "10 min walk" },
         { name: "Drava River Promenade", distance: "3 min walk" },
       ],
       directions: "Easy Access",
       access: [
-        "Free street parking available",
+        "Free parking available",
         "10 minutes from main bus station",
         "Close to all major restaurants and cafes",
       ],
@@ -30,7 +30,7 @@ const Location = ({ language }: LocationProps) => {
       address: "Vrt Jagode Truhelke 1, Osijek, Hrvatska",
       nearby: "Obližnje Atrakcije",
       attractions: [
-        { name: "Centar Grada", distance: "5 min hoda" },
+        { name: "Centar Grada", distance: "1 min hoda" },
         { name: "Tvrđa", distance: "10 min hoda" },
         { name: "Dravska Šetnica", distance: "3 min hoda" },
       ],
