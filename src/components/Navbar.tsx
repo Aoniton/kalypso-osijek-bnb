@@ -41,11 +41,16 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
   };
 
   const isActive = (path: string) => location.pathname === path;
+  const isHomePage = location.pathname === "/";
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-luxury" : "bg-secondary/40 backdrop-blur-sm"
+        isScrolled 
+          ? "bg-background/95 backdrop-blur-md shadow-luxury" 
+          : isHomePage 
+            ? "bg-secondary/40 backdrop-blur-sm"
+            : "bg-background/95 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">
