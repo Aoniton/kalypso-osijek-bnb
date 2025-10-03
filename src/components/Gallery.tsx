@@ -1,4 +1,10 @@
 import { Card } from "@/components/ui/card";
+import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
+import finnishSauna from "@/assets/finnish-sauna.jpg";
+import ledLighting from "@/assets/LED-ambient-lighting.jpg";
+import luxuryBedroom from "@/assets/luxury-bedroom.jpg";
+import romanticSetup from "@/assets/romantic-setup.jpg";
+import bathroomAmenities from "@/assets/bathroom-amenities.jpg";
 
 interface GalleryProps {
   language: "en" | "hr";
@@ -17,12 +23,12 @@ const Gallery = ({ language }: GalleryProps) => {
   };
 
   const images = [
-    { alt: "Kalypso Osijek wellness jacuzzi interior", aspectRatio: "aspect-[3/2]" },
-    { alt: "Kalypso Osijek Finnish sauna", aspectRatio: "aspect-square" },
-    { alt: "Kalypso Osijek LED ambient lighting", aspectRatio: "aspect-square" },
-    { alt: "Kalypso Osijek luxury bedroom", aspectRatio: "aspect-[3/2]" },
-    { alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
-    { alt: "Kalypso Osijek bathroom amenities", aspectRatio: "aspect-[4/3]" },
+    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", aspectRatio: "aspect-[3/2]" },
+    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", aspectRatio: "aspect-square" },
+    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", aspectRatio: "aspect-square" },
+    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", aspectRatio: "aspect-[3/2]" },
+    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
+    { src: bathroomAmenities, alt: "Kalypso Osijek bathroom amenities", aspectRatio: "aspect-[4/3]" },
   ];
 
   return (
@@ -44,10 +50,12 @@ const Gallery = ({ language }: GalleryProps) => {
               className="overflow-hidden hover:shadow-luxury transition-all duration-300 hover:scale-[1.02] cursor-pointer animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`${image.aspectRatio} bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center`}>
-                <p className="text-muted-foreground text-center px-4 text-sm">
-                  [{image.alt}]
-                </p>
+              <div className={`${image.aspectRatio} overflow-hidden`}>
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                />
               </div>
             </Card>
           ))}
