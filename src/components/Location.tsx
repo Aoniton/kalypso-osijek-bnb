@@ -57,7 +57,7 @@ const Location = ({ language }: LocationProps) => {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Map */}
-          <Card className="overflow-hidden shadow-luxury animate-slide-in-left">
+          <Card className="overflow-hidden shadow-luxury animate-slide-in-left p-0">
             <div className="w-full h-[450px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.8397!2d18.6947!3d45.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7a0b3c0b0b1%3A0x0!2sVrt%20Jagode%20Truhelke%201%2C%20Osijek!5e0!3m2!1sen!2shr!4v1234567890"
