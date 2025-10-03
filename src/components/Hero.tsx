@@ -31,31 +31,31 @@ const Hero = ({ language }: HeroProps) => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Darker Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-overlay" />
+        <div className="absolute inset-0 bg-gradient-overlay opacity-95" />
       </div>
 
       {/* Content */}
       <div className="relative h-full flex items-center justify-center px-4">
         <div className="text-center max-w-4xl animate-fade-in">
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-4">
+          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4">
             {content[language].title}
           </h1>
-          <p className="font-heading text-3xl md:text-5xl text-accent mb-6">
+          <p className="font-heading text-3xl md:text-5xl text-white/90 mb-6">
             {content[language].subtitle}
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             {content[language].description}
           </p>
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-12 py-6 text-lg rounded-xl shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105"
+            className="bg-primary hover:bg-primary-dark text-white font-semibold px-12 py-6 text-lg rounded-xl shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105 hover:ring-2 hover:ring-accent"
             onClick={() => window.location.href = "/contact"}
           >
             {content[language].cta}
@@ -66,7 +66,7 @@ const Hero = ({ language }: HeroProps) => {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/70 hover:text-accent transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-accent transition-colors animate-bounce"
         aria-label="Scroll down"
       >
         <ChevronDown className="w-8 h-8" />

@@ -47,16 +47,14 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        !isHomePage ? "bg-background/95 backdrop-blur-md shadow-luxury" : isScrolled ? "bg-background/95 backdrop-blur-md shadow-luxury" : "bg-secondary/40 backdrop-blur-sm"
+        !isHomePage ? "bg-primary backdrop-blur-md shadow-luxury" : isScrolled ? "bg-primary backdrop-blur-md shadow-luxury" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className={`text-2xl font-heading font-bold transition-colors ${
-            !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
-          }`}>
-            <span className="text-accent">KALYPSO</span> <span className={!isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"}>Osijek</span>
+          <Link to="/" className="text-2xl font-heading font-bold text-white transition-colors">
+            <span>KALYPSO</span> <span className="text-white/90">Osijek</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,8 +63,8 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isActive(item.path) ? "text-accent" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
+                className={`text-sm font-medium transition-colors text-white hover:text-accent ${
+                  isActive(item.path) ? "text-accent border-b-2 border-accent" : ""
                 }`}
               >
                 {item.label}
@@ -78,7 +76,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               variant="ghost"
               size="sm"
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
-              className={`hover:text-accent ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+              className="text-white hover:text-accent hover:bg-white/10"
             >
               <Globe className="w-4 h-4 mr-2" />
               {language === "en" ? "HR" : "EN"}
@@ -88,7 +86,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden hover:text-accent transition-colors ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+            className="md:hidden text-white hover:text-accent transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -103,8 +101,8 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-accent ${
-                    isActive(item.path) ? "text-accent" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
+                  className={`text-sm font-medium transition-colors text-white hover:text-accent ${
+                    isActive(item.path) ? "text-accent" : ""
                   }`}
                 >
                   {item.label}
@@ -117,7 +115,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   onLanguageChange(language === "en" ? "hr" : "en");
                   setIsOpen(false);
                 }}
-                className={`hover:text-accent justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+                className="text-white hover:text-accent hover:bg-white/10 justify-start"
               >
                 <Globe className="w-4 h-4 mr-2" />
                 {language === "en" ? "Hrvatski" : "English"}
