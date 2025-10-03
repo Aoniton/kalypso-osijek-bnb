@@ -1,4 +1,6 @@
 import { Card } from "@/components/ui/card";
+import jacuzziImage from "@/assets/jacuzzi-interior.jpg";
+
 
 interface GalleryProps {
   language: "en" | "hr";
@@ -36,6 +38,24 @@ const Gallery = ({ language }: GalleryProps) => {
             {content[language].subtitle}
           </p>
         </div>
+
+        // Girls in a jacuzzi image
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {images.map((img, index) => (
+    <div
+      key={index}
+      className="overflow-hidden rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+    >
+      <img
+        src={jacuzziImage} // we’ll make this dynamic in a moment
+        alt={img.alt}
+        className="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  ))}
+</div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((image, index) => (
