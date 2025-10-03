@@ -199,7 +199,7 @@ const Contact = ({ language }: ContactProps) => {
                   <div>
                     <h3 className="font-semibold text-foreground">{content[language].info.social}</h3>
                     <a 
-                      href="https://facebook.com/kalypso.osijek" 
+                      href="https://facebook.com/kalypso.osijek"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-accent transition-colors"
