@@ -15,7 +15,8 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Transition after scrolling past hero section (viewport height)
+      setIsScrolled(window.scrollY > window.innerHeight - 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
