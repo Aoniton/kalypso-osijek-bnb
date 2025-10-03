@@ -1,7 +1,5 @@
 import { Card } from "@/components/ui/card";
-// Temporarily commented out - upload about-kalypso.jpg to src/assets/ then uncomment
-// import aboutImage from "@/assets/about-kalypso.jpg";
-const aboutImage = "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920";
+import aboutImage from "@/assets/about-kalypso.jpg";
 
 interface AboutProps {
   language: "en" | "hr";

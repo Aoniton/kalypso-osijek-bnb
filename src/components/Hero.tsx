@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-// Temporarily commented out - upload hero-kalypso.jpg to src/assets/ then uncomment
-// import heroImage from "@/assets/hero-kalypso.jpg";
-const heroImage = "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920";
+import heroImage from "@/assets/hero-kalypso.jpg";
 
 interface HeroProps {
   language: "en" | "hr";
