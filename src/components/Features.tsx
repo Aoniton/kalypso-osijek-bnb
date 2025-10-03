@@ -100,7 +100,7 @@ const Features = ({ language }: FeaturesProps) => {
               className="hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
                   <feature.icon className="w-7 h-7 text-accent-foreground" />
                 </div>
