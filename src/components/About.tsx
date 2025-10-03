@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import aboutImage from "@/assets/about-kalypso.jpg";
 
 interface AboutProps {
   language: "en" | "hr";
