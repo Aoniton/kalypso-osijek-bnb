@@ -58,10 +58,17 @@ const Location = ({ language }: LocationProps) => {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Map */}
           <Card className="overflow-hidden shadow-luxury animate-slide-in-left">
-            <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <p className="text-muted-foreground text-center px-8">
-                [Google Maps embed placeholder - Vrt Jagode Truhelke 1, Osijek]
-              </p>
+            <div className="aspect-video">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.8397!2d18.6947!3d45.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7a0b3c0b0b1%3A0x0!2sVrt%20Jagode%20Truhelke%201%2C%20Osijek!5e0!3m2!1sen!2shr!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Kalypso Osijek Location"
+              />
             </div>
           </Card>
 
