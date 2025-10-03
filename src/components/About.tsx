@@ -49,9 +49,11 @@ const About = ({ language }: AboutProps) => {
           <div className="animate-slide-in-right">
             <Card className="overflow-hidden shadow-luxury hover:shadow-glow transition-all duration-300">
               <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <p className="text-muted-foreground text-center px-8">
-                  [Luxury apartment interior photo placeholder]
-                </p>
+                <img
+                  src={aboutImage}
+                  alt="Kalypso Osijek luxury apartment interior"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </Card>
           </div>
