@@ -78,7 +78,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               variant="ghost"
               size="sm"
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
-              className={`hover:text-accent ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+              className={`hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
             >
               <Globe className="w-4 h-4 mr-2" />
               {language === "en" ? "HR" : "EN"}
@@ -117,7 +117,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   onLanguageChange(language === "en" ? "hr" : "en");
                   setIsOpen(false);
                 }}
-                className={`hover:text-accent justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+                className={`hover:text-primary-foreground justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
               >
                 <Globe className="w-4 h-4 mr-2" />
                 {language === "en" ? "Hrvatski" : "English"}
