@@ -101,8 +101,8 @@ const Features = ({ language }: FeaturesProps) => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-4 shadow-luxury">
-                  <feature.icon className="w-7 h-7 text-accent" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
+                  <feature.icon className="w-7 h-7 text-accent-foreground" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold mb-2 text-foreground">
                   {feature.title}

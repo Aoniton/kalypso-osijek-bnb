@@ -35,7 +35,7 @@ const About = ({ language }: AboutProps) => {
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
               {content[language].title}
             </h2>
-            <p className="text-xl text-primary font-semibold mb-6">
+            <p className="text-xl text-accent font-semibold mb-6">
               {content[language].subtitle}
             </p>
             {content[language].description.map((paragraph, index) => (
