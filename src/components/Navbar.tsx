@@ -65,8 +65,8 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  isActive(item.path) ? "text-accent" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive(item.path) ? "text-primary" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
                 }`}
               >
                 {item.label}
@@ -103,8 +103,8 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-accent ${
-                    isActive(item.path) ? "text-accent" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isActive(item.path) ? "text-primary" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
                   }`}
                 >
                   {item.label}

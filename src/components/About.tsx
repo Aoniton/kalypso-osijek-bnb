@@ -28,7 +28,7 @@ const About = ({ language }: AboutProps) => {
   };
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-20 px-4 bg-gradient-elegant">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -40,7 +40,7 @@ const About = ({ language }: AboutProps) => {
               {content[language].subtitle}
             </p>
             {content[language].description.map((paragraph, index) => (
-              <p key={index} className="text-muted-foreground mb-4 leading-relaxed">
+              <p key={index} className="text-muted-foreground mb-4 leading-loose">
                 {paragraph}
               </p>
             ))}
@@ -49,11 +49,11 @@ const About = ({ language }: AboutProps) => {
           {/* Image Card */}
           <div className="animate-slide-in-right">
             <Card className="overflow-hidden shadow-luxury hover:shadow-glow transition-all duration-300">
-              <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <div className="aspect-[4/3] relative">
                 <img
                   src={aboutImage}
                   alt="Kalypso Osijek luxury apartment interior"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover filter brightness-95 saturate-90 sepia-[0.1]"
                 />
               </div>
             </Card>

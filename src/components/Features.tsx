@@ -93,15 +93,15 @@ const Features = ({ language }: FeaturesProps) => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {content[language].features.map((feature, index) => (
             <Card
               key={index}
-              className="hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 animate-scale-in"
+              className="hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 animate-scale-in border shadow-soft"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mb-4 shadow-glow">
+                <div className="w-14 h-14 rounded-xl bg-gradient-accent flex items-center justify-center mb-4 shadow-soft">
                   <feature.icon className="w-7 h-7 text-accent-foreground" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold mb-2 text-foreground">

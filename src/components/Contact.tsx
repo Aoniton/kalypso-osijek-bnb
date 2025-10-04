@@ -71,7 +71,7 @@ const Contact = ({ language }: ContactProps) => {
   };
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-20 px-4 bg-gradient-elegant">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
@@ -86,7 +86,7 @@ const Contact = ({ language }: ContactProps) => {
           {/* Contact Form */}
           <Card className="shadow-luxury animate-slide-in-left">
             <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <Input
                     name="name"
@@ -94,7 +94,7 @@ const Contact = ({ language }: ContactProps) => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="rounded-xl"
+                    className="rounded-lg"
                   />
                 </div>
                 <div>
@@ -105,7 +105,7 @@ const Contact = ({ language }: ContactProps) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="rounded-xl"
+                    className="rounded-lg"
                   />
                 </div>
                 <div>
@@ -115,7 +115,7 @@ const Contact = ({ language }: ContactProps) => {
                     placeholder={content[language].form.phone}
                     value={formData.phone}
                     onChange={handleChange}
-                    className="rounded-xl"
+                    className="rounded-lg"
                   />
                 </div>
                 <div>
@@ -126,12 +126,12 @@ const Contact = ({ language }: ContactProps) => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="rounded-xl"
+                    className="rounded-lg"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-semibold py-6 rounded-xl shadow-luxury hover:shadow-glow transition-all duration-300"
+                  className="w-full bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground font-semibold py-6 rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300"
                 >
                   {content[language].form.submit}
                 </Button>
@@ -141,10 +141,10 @@ const Contact = ({ language }: ContactProps) => {
 
           {/* Contact Info */}
           <div className="space-y-6 animate-slide-in-right">
-            <Card className="shadow-luxury">
+            <Card className="shadow-soft">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
                     <Phone className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
@@ -157,10 +157,10 @@ const Contact = ({ language }: ContactProps) => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-luxury">
+            <Card className="shadow-soft">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
                     <Mail className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
@@ -173,10 +173,10 @@ const Contact = ({ language }: ContactProps) => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-luxury">
+            <Card className="shadow-soft">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
                     <MapPin className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
@@ -190,10 +190,10 @@ const Contact = ({ language }: ContactProps) => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-luxury">
+            <Card className="shadow-soft">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
                     <Facebook className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>

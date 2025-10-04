@@ -43,7 +43,7 @@ const Footer = ({ language }: FooterProps) => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-heading font-bold mb-2">
-              <span className="text-accent">KALYPSO</span> Osijek
+              <span className="text-primary">KALYPSO</span> Osijek
             </h3>
             <p className="text-secondary-foreground/80">
               {content[language].tagline}
@@ -58,7 +58,7 @@ const Footer = ({ language }: FooterProps) => {
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors"
+                    className="text-secondary-foreground/80 hover:text-primary transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -86,9 +86,9 @@ const Footer = ({ language }: FooterProps) => {
                   href="https://facebook.com/kalypsosijek" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center hover:text-accent transition-colors"
+                  className="flex items-center hover:text-primary transition-colors group"
                 >
-                  <Facebook className="w-4 h-4 mr-2" />
+                  <Facebook className="w-4 h-4 mr-2 group-hover:text-primary" />
                   Facebook
                 </a>
               </li>

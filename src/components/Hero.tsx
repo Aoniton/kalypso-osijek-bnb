@@ -55,7 +55,7 @@ const Hero = ({ language }: HeroProps) => {
           </p>
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-12 py-6 text-lg rounded-xl shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105"
+            className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground font-semibold px-12 py-6 text-lg rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105"
             onClick={() => window.location.href = "/contact"}
           >
             {content[language].cta}

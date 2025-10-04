@@ -47,15 +47,16 @@ const Gallery = ({ language }: GalleryProps) => {
           {images.map((image, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-luxury transition-all duration-300 hover:scale-[1.02] cursor-pointer animate-scale-in"
+              className="overflow-hidden hover:shadow-luxury transition-all duration-300 hover:scale-[1.02] cursor-pointer animate-scale-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`${image.aspectRatio} overflow-hidden`}>
+              <div className={`${image.aspectRatio} overflow-hidden relative`}>
                 <img 
                   src={image.src} 
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </Card>
           ))}
