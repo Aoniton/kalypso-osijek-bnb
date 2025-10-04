@@ -1,5 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/jacuzzi-interior.jpg";
+import heroImage from "@/assets/hero-kalypso.jpg";
 
 interface HeroProps {
   language: "en" | "hr";
@@ -33,53 +34,55 @@ const Hero = ({ language }: HeroProps) => {
   };
 
   return (
-    <section className="relative h-screen flex flex-col justify-end pb-20 px-4 text-center overflow-hidden">
-      {/* Background Image */}
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0">
         <img 
           src={heroImage}
           alt=""
-          className="w-full h-full object-cover object-[center_70%] md:object-center brightness-[0.85] contrast-[1.1] saturate-[0.9] will-change-transform animate-hero-kenburns"
+          className="object-cover w-full h-full brightness-[0.9] contrast-[1.05] saturate-[0.9] object-center md:object-center"
+          style={{ objectPosition: 'center 30%' }}
         />
-        {/* Bottom-focused gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-[1]" />
-        {/* Vignette overlay */}
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.55)_100%)] z-[2]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70 z-[1]" />
       </div>
 
       {/* Content */}
-      <div className="relative z-[3] max-w-[90%] mx-auto">
-        <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight tracking-tight mb-3">
-          {content[language].title}
-          <br />
-          {content[language].titleLine2}
-        </h1>
-        <p 
-          className="text-lg md:text-xl leading-relaxed mb-4"
-          style={{ 
-            color: '#e75f91',
-            filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))'
-          }}
-        >
-          {content[language].subtitle}
-        </p>
-        <p className="text-base md:text-lg leading-relaxed text-white/90 max-w-[600px] mx-auto mb-6">
-          {content[language].description}
-        </p>
-        <a
-          href="#contact"
-          className="inline-flex items-center justify-center font-semibold py-3 px-8 rounded-xl shadow-lg transition hover:brightness-110"
-          style={{ backgroundColor: '#e75f91', color: 'white', boxShadow: '0 4px 20px rgba(231, 95, 145, 0.3)' }}
-          aria-label={content[language].ctaAriaLabel}
-        >
-          {content[language].cta}
-        </a>
+      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-[2]">
+        <div className="max-w-[90%] mx-auto animate-fade-in">
+          <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight tracking-tight text-center">
+            {content[language].title}
+            <br />
+            {content[language].titleLine2}
+          </h1>
+          <p 
+            className="mt-2 text-lg md:text-xl leading-relaxed text-center"
+            style={{ 
+              color: '#e75f91',
+              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))'
+            }}
+          >
+            {content[language].subtitle}
+          </p>
+          <p className="mt-3 text-base md:text-lg leading-relaxed text-white/90 text-center max-w-[600px] mx-auto">
+            {content[language].description}
+          </p>
+          <div className="mt-5 flex justify-center">
+            <a
+              href="#contact"
+              className="w-full max-w-[280px] inline-flex items-center justify-center font-semibold py-3 rounded-xl shadow-lg shadow-pink-300/30 transition hover:brightness-110"
+              style={{ backgroundColor: '#e75f91', color: 'white' }}
+              aria-label={content[language].ctaAriaLabel}
+            >
+              {content[language].cta}
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce z-[3]"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce z-[2]"
         aria-label="Scroll down"
       >
         <ChevronDown className="w-8 h-8" />

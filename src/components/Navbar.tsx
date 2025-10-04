@@ -74,24 +74,15 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
             ))}
             
             {/* Language Switcher */}
-            <button
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
-              className={`inline-flex items-center justify-center gap-2 px-3 h-9 rounded-md text-sm font-medium transition-colors ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
-              style={{
-                transition: 'background-color 0.2s, color 0.2s'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#e75f91';
-                e.currentTarget.style.color = 'white';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = (!isHomePage || isScrolled) ? 'hsl(0 0% 15%)' : 'hsl(0 0% 100%)';
-              }}
+              className={`hover:bg-primary hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
             >
-              <Globe className="w-4 h-4" />
+              <Globe className="w-4 h-4 mr-2" />
               {language === "en" ? "HR" : "EN"}
-            </button>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,27 +110,18 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   {item.label}
                 </Link>
               ))}
-              <button
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => {
                   onLanguageChange(language === "en" ? "hr" : "en");
                   setIsOpen(false);
                 }}
-                className={`inline-flex items-center justify-start gap-2 px-3 h-9 rounded-md text-sm font-medium transition-colors ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
-                style={{
-                  transition: 'background-color 0.2s, color 0.2s'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#e75f91';
-                  e.currentTarget.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = (!isHomePage || isScrolled) ? 'hsl(0 0% 15%)' : 'hsl(0 0% 100%)';
-                }}
+                className={`hover:bg-primary hover:text-primary-foreground justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
               >
-                <Globe className="w-4 h-4" />
+                <Globe className="w-4 h-4 mr-2" />
                 {language === "en" ? "Hrvatski" : "English"}
-              </button>
+              </Button>
             </div>
           </div>
         )}
