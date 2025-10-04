@@ -74,15 +74,24 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
             ))}
             
             {/* Language Switcher */}
-            <Button
-              variant="ghost"
-              size="sm"
+            <button
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
-              className={`hover:bg-primary hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+              className={`inline-flex items-center justify-center gap-2 px-3 h-9 rounded-md text-sm font-medium transition-colors ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+              style={{
+                transition: 'background-color 0.2s, color 0.2s'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#e75f91';
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = (!isHomePage || isScrolled) ? 'hsl(0 0% 15%)' : 'hsl(0 0% 100%)';
+              }}
             >
-              <Globe className="w-4 h-4 mr-2" />
+              <Globe className="w-4 h-4" />
               {language === "en" ? "HR" : "EN"}
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,18 +119,27 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   {item.label}
                 </Link>
               ))}
-              <Button
-                variant="ghost"
-                size="sm"
+              <button
                 onClick={() => {
                   onLanguageChange(language === "en" ? "hr" : "en");
                   setIsOpen(false);
                 }}
-                className={`hover:bg-primary hover:text-primary-foreground justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+                className={`inline-flex items-center justify-start gap-2 px-3 h-9 rounded-md text-sm font-medium transition-colors ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+                style={{
+                  transition: 'background-color 0.2s, color 0.2s'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#e75f91';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = (!isHomePage || isScrolled) ? 'hsl(0 0% 15%)' : 'hsl(0 0% 100%)';
+                }}
               >
-                <Globe className="w-4 h-4 mr-2" />
+                <Globe className="w-4 h-4" />
                 {language === "en" ? "Hrvatski" : "English"}
-              </Button>
+              </button>
             </div>
           </div>
         )}

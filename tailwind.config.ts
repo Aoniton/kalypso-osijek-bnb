@@ -99,6 +99,10 @@ export default {
           "0%, 100%": { boxShadow: "0 0 20px rgba(0, 255, 144, 0.3)" },
           "50%": { boxShadow: "0 0 40px rgba(0, 255, 144, 0.6)" },
         },
+        "hero-kenburns": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.08)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -108,6 +112,7 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "hero-kenburns": "hero-kenburns 20s ease-out forwards",
       },
     },
   },
