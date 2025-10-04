@@ -9,16 +9,20 @@ interface HeroProps {
 const Hero = ({ language }: HeroProps) => {
   const content = {
     en: {
-      title: "The Hidden Diamond In Osijek, Croatia",
+      title: "The Hidden Diamond",
+      titleLine2: "of Osijek, Croatia",
       subtitle: "Private Luxury. A Place Just for You.",
-      description: "Sink into the jacuzzi, breathe in the sauna’s warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
+      description: "Sink into the jacuzzi, breathe in the sauna's warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
       cta: "Book Now",
+      ctaAriaLabel: "Book your stay at Kalypso Osijek",
     },
     hr: {
-      title: "Najljepši wellness apartman u Osijeku",
-      subtitle: "Privatni luksuz. Mjesto samo za Vas.",
-      description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se ugodnom svjetlu večeri. Svaki detalj stvoren je da se opustite, povežete i uživate u trenutku.",
-      cta: "Rezerviraj Svoj Boravak",
+      title: "Skriveni dragulj",
+      titleLine2: "Osijeka, Hrvatske",
+      subtitle: "Privatni luksuz. Mjesto samo za vas.",
+      description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se mekanom svjetlu večeri. Svaki je detalj tu da se opustite, povežete i uživate u trenutku.",
+      cta: "Rezerviraj sada",
+      ctaAriaLabel: "Rezerviraj boravak u Kalypso Osijeku",
     },
   };
 
@@ -38,25 +42,29 @@ const Hero = ({ language }: HeroProps) => {
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50" />
       </div>
 
       {/* Content */}
       <div className="relative h-full flex items-center justify-center px-4">
-        <div className="text-center max-w-4xl animate-fade-in">
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-4">
+        <div className="text-center max-w-[90%] mx-auto animate-fade-in">
+          <h1 className="font-extrabold tracking-tight text-4xl md:text-6xl leading-relaxed md:leading-[1.1] text-white">
             {content[language].title}
+            <br />
+            {content[language].titleLine2}
           </h1>
-          <p className="font-heading text-3xl md:text-5xl text-accent mb-6">
+          <p className="text-lg md:text-xl leading-relaxed mt-2" style={{ color: '#e75f91' }}>
             {content[language].subtitle}
           </p>
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg leading-relaxed text-white/90 mt-3 max-w-2xl mx-auto">
             {content[language].description}
           </p>
           <Button
             size="lg"
-            className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground font-semibold px-12 py-6 text-lg rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105"
+            className="w-full max-w-[300px] mx-auto mt-5 font-semibold px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:ring-2 hover:ring-pink-300/40 transition-all duration-300"
+            style={{ backgroundColor: '#e75f91', color: 'white' }}
             onClick={() => window.location.href = "/contact"}
+            aria-label={content[language].ctaAriaLabel}
           >
             {content[language].cta}
           </Button>
