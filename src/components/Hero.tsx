@@ -16,7 +16,7 @@ const Hero = ({ language }: HeroProps) => {
     },
     hr: {
       title: "Najljepši wellness apartman u Osijeku",
-      subtitle: "Privatni luksuz. Mjesto samo za vas.",
+      subtitle: "Privatni luksuz. Mjesto samo za Vas.",
       description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se ugodnom svjetlu večeri. Svaki detalj stvoren je da se opustite, povežete i uživate u trenutku.",
       cta: "Rezerviraj Svoj Boravak",
     },
