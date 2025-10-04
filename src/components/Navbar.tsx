@@ -56,7 +56,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           <Link to="/" className={`text-2xl font-heading font-bold transition-colors ${
             !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
           }`}>
-            <span className="text-accent">KALYPSO</span> <span className={!isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"}>Osijek</span>
+            <span className="text-primary">KALYPSO</span> <span className={!isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"}>Osijek</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -78,7 +78,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               variant="ghost"
               size="sm"
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
-              className={`hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+              className={`hover:text-primary ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
             >
               <Globe className="w-4 h-4 mr-2" />
               {language === "en" ? "HR" : "EN"}
@@ -117,7 +117,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   onLanguageChange(language === "en" ? "hr" : "en");
                   setIsOpen(false);
                 }}
-                className={`hover:text-primary-foreground justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+                className={`hover:text-primary justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
               >
                 <Globe className="w-4 h-4 mr-2" />
                 {language === "en" ? "Hrvatski" : "English"}
