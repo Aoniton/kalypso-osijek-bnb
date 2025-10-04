@@ -10,7 +10,7 @@ const Hero = ({ language }: HeroProps) => {
   const content = {
     en: {
       title: "The Hidden Diamond",
-      titleLine2: "of Osijek, Croatia",
+      titleLine2: "of Osijek",
       subtitle: "Private Luxury. A Place Just for You.",
       description: "Sink into the jacuzzi, breathe in the sauna's warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
       cta: "Book Now",
@@ -18,9 +18,9 @@ const Hero = ({ language }: HeroProps) => {
     },
     hr: {
       title: "Skriveni dragulj",
-      titleLine2: "Osijeka, Hrvatske",
-      subtitle: "Privatni luksuz. Mjesto samo za vas.",
-      description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se mekanom svjetlu večeri. Svaki je detalj tu da se opustite, povežete i uživate u trenutku.",
+      titleLine2: "Osijeka",
+      subtitle: "Privatni luksuz. Mjesto samo za Vas.",
+      description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se ugodnom svjetlu večeri. Svaki je detalj tu da se opustite, povežete i uživate u trenutku.",
       cta: "Rezerviraj sada",
       ctaAriaLabel: "Rezerviraj boravak u Kalypso Osijeku",
     },
