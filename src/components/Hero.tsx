@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/jacuzzi-interior.jpg";
+import heroImage from "@/assets/hero-kalypso.jpg";
 
 interface HeroProps {
   language: "en" | "hr";
