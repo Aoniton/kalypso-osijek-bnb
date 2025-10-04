@@ -41,7 +41,7 @@ const Apartment = () => {
   return (
     <div className="min-h-screen">
       <Navbar language={language} onLanguageChange={setLanguage} />
-      <main className="pt-20">
+      <main className="pt-16">
         <section className="py-20 px-4 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16 animate-fade-in">

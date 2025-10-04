@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-kalypso.jpg";
 
 interface HeroProps {
@@ -26,12 +24,6 @@ const Hero = ({ language }: HeroProps) => {
     },
   };
 
-  const scrollToContent = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -82,14 +74,6 @@ const Hero = ({ language }: HeroProps) => {
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <button
-        onClick={scrollToContent}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/80 hover:text-white transition-colors animate-float z-[3] bg-white/10 backdrop-blur-sm rounded-full p-2"
-        aria-label="Scroll down"
-      >
-        <ChevronDown className="w-6 h-6" />
-      </button>
     </section>
   );
 };

@@ -83,7 +83,7 @@ const Footer = ({ language }: FooterProps) => {
               </li>
               <li>
                 <a 
-                  href="https://facebook.com/kalypsosijek" 
+                  href="https://www.facebook.com/kalypso.osijek"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center hover:text-primary transition-colors group"
