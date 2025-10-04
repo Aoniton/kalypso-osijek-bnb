@@ -9,15 +9,15 @@ interface HeroProps {
 const Hero = ({ language }: HeroProps) => {
   const content = {
     en: {
-      title: "Experience Luxury Wellness",
-      subtitle: "in the Heart of Osijek",
-      description: "Your romantic escape awaits with jacuzzi, sauna, and ultimate relaxation",
-      cta: "Book Your Stay",
+      title: "Osijek’s Premier Wellness Apartment",
+      subtitle: "Private Luxury. A Place Just for You.",
+      description: "Sink into the jacuzzi, breathe in the sauna’s warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
+      cta: "Book Now",
     },
     hr: {
-      title: "Doživite Luksuzni Wellness",
-      subtitle: "u Srcu Osijeka",
-      description: "Vaš romantični bijeg čeka s jacuzzijem, saunom i ultimativnim opuštanjem",
+      title: "Najljepši wellness apartman u Osijeku",
+      subtitle: "Privatni luksuz. Mjesto samo za vas.",
+      description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se ugodnom svjetlu večeri. Svaki detalj stvoren je da se opustite, povežete i uživate u trenutku.",
       cta: "Rezerviraj Svoj Boravak",
     },
   };
