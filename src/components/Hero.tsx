@@ -9,7 +9,7 @@ interface HeroProps {
 const Hero = ({ language }: HeroProps) => {
   const content = {
     en: {
-      title: "Premier Wellness Apartment in Osijek",
+      title: "The Hidden Diamond In Osijek, Croatia",
       subtitle: "Private Luxury. A Place Just for You.",
       description: "Sink into the jacuzzi, breathe in the sauna’s warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
       cta: "Book Now",
