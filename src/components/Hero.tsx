@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-kalypso.jpg";
+import heroImage from "@/assets/jacuzzi-interior.jpg";
 
 interface HeroProps {
   language: "en" | "hr";
@@ -35,46 +35,54 @@ const Hero = ({ language }: HeroProps) => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50" />
+      {/* Background Image with Gradient Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage}
+          alt=""
+          className="object-cover w-full h-full brightness-[0.9] contrast-[1.05] saturate-[0.9] object-center md:object-center"
+          style={{ objectPosition: 'center 30%' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70 z-[1]" />
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center px-4">
-        <div className="text-center max-w-[90%] mx-auto animate-fade-in">
-          <h1 className="font-extrabold tracking-tight text-4xl md:text-6xl leading-relaxed md:leading-[1.1] text-white">
+      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-[2]">
+        <div className="max-w-[90%] mx-auto animate-fade-in">
+          <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight tracking-tight text-center">
             {content[language].title}
             <br />
             {content[language].titleLine2}
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed mt-2" style={{ color: '#e75f91' }}>
+          <p 
+            className="mt-2 text-lg md:text-xl leading-relaxed text-center"
+            style={{ 
+              color: '#e75f91',
+              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))'
+            }}
+          >
             {content[language].subtitle}
           </p>
-          <p className="text-base md:text-lg leading-relaxed text-white/90 mt-3 max-w-2xl mx-auto">
+          <p className="mt-3 text-base md:text-lg leading-relaxed text-white/90 text-center max-w-[600px] mx-auto">
             {content[language].description}
           </p>
-          <Button
-            size="lg"
-            className="w-full max-w-[300px] mx-auto mt-5 font-semibold px-8 py-6 text-base md:text-lg rounded-xl shadow-lg hover:ring-2 hover:ring-pink-300/40 transition-all duration-300"
-            style={{ backgroundColor: '#e75f91', color: 'white' }}
-            onClick={() => window.location.href = "/contact"}
-            aria-label={content[language].ctaAriaLabel}
-          >
-            {content[language].cta}
-          </Button>
+          <div className="mt-5 flex justify-center">
+            <a
+              href="#contact"
+              className="w-full max-w-[280px] inline-flex items-center justify-center font-semibold py-3 rounded-xl shadow-lg shadow-pink-300/30 transition hover:brightness-110"
+              style={{ backgroundColor: '#e75f91', color: 'white' }}
+              aria-label={content[language].ctaAriaLabel}
+            >
+              {content[language].cta}
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/70 hover:text-accent transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce z-[2]"
         aria-label="Scroll down"
       >
         <ChevronDown className="w-8 h-8" />
