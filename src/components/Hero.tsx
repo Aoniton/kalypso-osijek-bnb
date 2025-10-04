@@ -35,41 +35,44 @@ const Hero = ({ language }: HeroProps) => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image with Gradient Overlay */}
+      {/* Background Image with Cinematic Treatment */}
       <div className="absolute inset-0">
         <img 
           src={heroImage}
           alt=""
-          className="object-cover w-full h-full brightness-[0.9] contrast-[1.05] saturate-[0.9] object-center md:object-center"
-          style={{ objectPosition: 'center 30%' }}
+          className="object-cover w-full h-full brightness-[0.85] contrast-[1.1] saturate-[0.95] will-change-transform animate-hero-kenburns object-[center_70%] md:object-center"
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/70 z-[1]" />
+        {/* Bottom gradient for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-[1]" />
+        {/* Vignette overlay for cinematic framing */}
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.55)_100%)] z-[2]" />
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-[2]">
-        <div className="max-w-[90%] mx-auto animate-fade-in">
-          <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight tracking-tight text-center">
+      <div className="relative h-full flex flex-col justify-end pb-16 md:pb-20 items-center text-center px-4 z-[3]">
+        <div className="max-w-[90%] mx-auto">
+          <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight tracking-wide mb-3 animate-[fade-in_0.8s_ease-out_0.2s_both]">
             {content[language].title}
             <br />
             {content[language].titleLine2}
           </h1>
           <p 
-            className="mt-2 text-lg md:text-xl leading-relaxed text-center"
+            className="text-lg md:text-xl leading-relaxed mb-4 animate-[fade-in_0.8s_ease-out_0.4s_both]"
             style={{ 
               color: '#e75f91',
-              filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.6))'
+              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.8))'
             }}
           >
             {content[language].subtitle}
           </p>
-          <p className="mt-3 text-base md:text-lg leading-relaxed text-white/90 text-center max-w-[600px] mx-auto">
+          <p className="text-base md:text-lg leading-relaxed text-white/90 max-w-[650px] mx-auto mb-6 animate-[fade-in_0.8s_ease-out_0.6s_both]">
             {content[language].description}
           </p>
-          <div className="mt-5 flex justify-center">
+          <div className="flex justify-center animate-[fade-in_0.8s_ease-out_0.8s_both]">
             <a
               href="#contact"
-              className="w-full max-w-[280px] inline-flex items-center justify-center font-semibold py-3 rounded-xl shadow-lg shadow-pink-300/30 transition hover:brightness-110"
+              className="w-full max-w-[280px] inline-flex items-center justify-center font-medium py-3 rounded-xl shadow-lg shadow-pink-500/30 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/40 active:scale-95 transition-all duration-300 ease-out"
               style={{ backgroundColor: '#e75f91', color: 'white' }}
               aria-label={content[language].ctaAriaLabel}
             >
@@ -79,13 +82,13 @@ const Hero = ({ language }: HeroProps) => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Enhanced Scroll Indicator */}
       <button
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce z-[2]"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/80 hover:text-white transition-colors animate-float z-[3] bg-white/10 backdrop-blur-sm rounded-full p-2"
         aria-label="Scroll down"
       >
-        <ChevronDown className="w-8 h-8" />
+        <ChevronDown className="w-6 h-6" />
       </button>
     </section>
   );
