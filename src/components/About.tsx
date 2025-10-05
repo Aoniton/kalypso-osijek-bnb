@@ -22,7 +22,7 @@ const About = ({ language }: AboutProps) => {
       description: [
         "U samom centru Osijeka, Kalypso nije samo smještaj — to je prilika da usporite, odmorite i povežete se. Apartman spaja udobnost, stil i privatnost, stvarajući savršen prostor za parove i sve koji žele pobjeći od svakodnevice.",
         "Naš ekskluzivni wellness apartman sadrži privatni jacuzzi, finsku saunu i ambijentalno LED osvjetljenje dizajnirano da stvori savršenu romantičnu atmosferu.",
-        "Opustite se u toplom jacuzziju, uživajte u finskoj sauni i pustite da ugodna rasvjeta stvori pravi ugođaj."
+        "Opustite se u toplom jacuzziju, uživajte u finskoj sauni i pustite da ugodna rasvjeta stvori pravi ugođaj.",
         "Bilo da dolazite na romantični bijeg ili miran vikend za sebe, Kalypso čini svaki boravak posebnim.",
       ],
     },
