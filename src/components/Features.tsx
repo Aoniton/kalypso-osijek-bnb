@@ -8,23 +8,23 @@ interface FeaturesProps {
 const Features = ({ language }: FeaturesProps) => {
   const content = {
     en: {
-      title: "Wellness & Features",
-      subtitle: "Everything You Need for the Perfect Stay",
+      title: "Wellness Experience",
+      subtitle: "Everything You Need For The Perfect Stay",
       features: [
         {
           icon: Waves,
           title: "Private Jacuzzi",
-          description: "Luxurious hot tub with hydro-massage jets and chromotherapy lighting",
+          description: "Your own quiet corner to relax and recharge",
         },
         {
           icon: Flame,
           title: "Finnish Sauna",
-          description: "Traditional dry sauna for deep relaxation and detoxification",
+          description: "Gentle heat, calm mind and pure comfort",
         },
         {
           icon: Lightbulb,
           title: "LED Ambiance",
-          description: "Customizable mood lighting to create your perfect atmosphere",
+          description: "Soft lights set the mood for any moment",
         },
         {
           icon: Wifi,
@@ -39,28 +39,28 @@ const Features = ({ language }: FeaturesProps) => {
         {
           icon: Star,
           title: "Premium Amenities",
-          description: "Luxury toiletries, plush towels, and premium bedding",
+          description: "All the little things that make a big difference",
         },
       ],
     },
     hr: {
-      title: "Wellness & Sadržaji",
-      subtitle: "Sve Što Vam Je Potrebno za Savršeni Boravak",
+      title: "Wellness Doživljaj",
+      subtitle: "Sve Što Vam Je Potrebno Za Savršeni Boravak",
       features: [
         {
           icon: Waves,
           title: "Privatni Jacuzzi",
-          description: "Luksuzna hidromasažna kada s mlaznicama i kromoterapijskim osvjetljenjem",
+          description: "Topla kupka, prigušena svjetla i trenutak samo za Vas",
         },
         {
           icon: Flame,
           title: "Finska Sauna",
-          description: "Tradicionalna suha sauna za duboko opuštanje i detoksikaciju",
+          description: "Mir, tišina i ugodna toplina — za Vas",
         },
         {
           icon: Lightbulb,
           title: "LED Ambijent",
-          description: "Prilagodljivo raspoloženjsko osvjetljenje za vašu savršenu atmosferu",
+          description: "Svjetlo koje prati Vaš trenutak i stvara poseban ugođaj",
         },
         {
           icon: Wifi,
@@ -70,12 +70,12 @@ const Features = ({ language }: FeaturesProps) => {
         {
           icon: Heart,
           title: "Romantični Aranžmani",
-          description: "Besplatni romantični aranžmani za posebne prilike",
+          description: "Dodatni romantični aranžmani za posebne prilike",
         },
         {
           icon: Star,
           title: "Premium Sadržaji",
-          description: "Luksuzni toaletni pribor, mekani ručnici i premium posteljina",
+          description: "Sve male stvari koje čine veliku razliku",
         },
       ],
     },
