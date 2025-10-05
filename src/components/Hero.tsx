@@ -35,8 +35,8 @@ const Hero = ({ language }: HeroProps) => {
           className="object-cover w-full h-full brightness-[0.85] contrast-[1.1] saturate-[0.95] will-change-transform animate-hero-kenburns object-[center_70%] md:object-center"
           loading="eager"
         />
-        {/* Bottom gradient for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-[1]" />
+        {/* Top to bottom gradient for text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/10 z-[1]" />
         {/* Vignette overlay for cinematic framing */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.55)_100%)] z-[2]" />
       </div>
