@@ -141,7 +141,7 @@ const Contact = ({ language }: ContactProps) => {
 
           {/* Contact Info */}
           <div className="space-y-6 animate-slide-in-right">
-            <Card className="shadow-soft">
+            <Card className="shadow-soft transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
@@ -157,7 +157,7 @@ const Contact = ({ language }: ContactProps) => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-soft">
+            <Card className="shadow-soft transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
@@ -173,7 +173,7 @@ const Contact = ({ language }: ContactProps) => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-soft">
+            <Card className="shadow-soft transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
@@ -190,7 +190,7 @@ const Contact = ({ language }: ContactProps) => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-soft">
+            <Card className="shadow-soft transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
