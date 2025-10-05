@@ -9,7 +9,13 @@ const Hero = ({ language }: HeroProps) => {
     en: {
       title: "The Hidden Diamond",
       titleLine2: "of Osijek",
-      subtitle: "Private Luxury. A Place Just for You.",
+      subtitle: (
+        <>
+          Private Luxury.
+          <br />
+          A Place Just for You.
+        </>
+      ),
       description: "Sink into the jacuzzi, breathe in the sauna's warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
       cta: "Book Now",
       ctaAriaLabel: "Book your stay at Kalypso Osijek",
@@ -17,7 +23,13 @@ const Hero = ({ language }: HeroProps) => {
     hr: {
       title: "Skriveni dragulj",
       titleLine2: "Osijeka",
-      subtitle: "Privatni luksuz. Mjesto samo za Vas.",
+      subtitle: (
+        <>
+          Privatni luksuz.
+          <br />
+          Mjesto samo za Vas.
+        </>
+      ),
       description: "Uronite u jacuzzi, osjetite toplinu saune i prepustite se ugodnom svjetlu večeri. Svaki je detalj tu da se opustite, povežete i uživate u trenutku.",
       cta: "Rezerviraj sada",
       ctaAriaLabel: "Rezerviraj boravak u Kalypso Osijeku",
@@ -36,7 +48,7 @@ const Hero = ({ language }: HeroProps) => {
           loading="eager"
         />
         {/* Top to bottom gradient for text visibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/10 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/10 z-[1]" />
         {/* Vignette overlay for cinematic framing */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.55)_100%)] z-[2]" />
       </div>
@@ -50,10 +62,10 @@ const Hero = ({ language }: HeroProps) => {
             {content[language].titleLine2}
           </h1>
           <p 
-            className="text-lg md:text-xl leading-relaxed mb-4 animate-[fade-in_0.8s_ease-out_0.4s_both]"
+            className="text-xl md:text-2xl font-semibold leading-relaxed tracking-wide mb-4 animate-[fade-in_0.8s_ease-out_0.4s_both]"
             style={{ 
               color: '#e75f91',
-              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.8))'
+              filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.9)) drop-shadow(0 4px 16px rgba(0,0,0,0.8)) drop-shadow(0 1px 3px rgba(0,0,0,1))'
             }}
           >
             {content[language].subtitle}
