@@ -5,6 +5,13 @@ import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
 import finnishSauna from "@/assets/finnish-sauna.jpg";
 import ledLighting from "@/assets/LED-ambient-lighting.jpg";
 import bathroomAmenities from "@/assets/bathroom-amenities.jpg";
+import aboutKalypso from "@/assets/about-kalypso.jpg";
+import bedroom from "@/assets/bedroom.jpg";
+import heroKalypso from "@/assets/hero-kalypso.jpg";
+import jacuzziPurpleLights from "@/assets/jacuzzi-purple-lights.jpg";
+import livingArea from "@/assets/living-area.jpg";
+import livingRoom from "@/assets/living-room.jpg";
+import saunaPhoto from "@/assets/sauna-photo.jpg";
 
 interface GalleryProps {
   language: "en" | "hr";
@@ -24,11 +31,18 @@ const Gallery = ({ language }: GalleryProps) => {
 
   const images = [
     { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", aspectRatio: "aspect-[3/2]" },
-    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
     { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", aspectRatio: "aspect-[3/2]" },
     { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", aspectRatio: "aspect-square" },
+    { src: heroKalypso, alt: "Kalypso Osijek luxury wellness apartment exterior", aspectRatio: "aspect-[3/2]" },
+    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
+    { src: jacuzziPurpleLights, alt: "Kalypso Osijek jacuzzi with purple ambient lights", aspectRatio: "aspect-[3/2]" },
+    { src: livingRoom, alt: "Kalypso Osijek modern living room", aspectRatio: "aspect-[4/3]" },
+    { src: bedroom, alt: "Kalypso Osijek comfortable bedroom", aspectRatio: "aspect-[3/2]" },
     { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", aspectRatio: "aspect-square" },
-    { src: bathroomAmenities, alt: "Kalypso Osijek bathroom amenities", aspectRatio: "aspect-[4/3]" },
+    { src: livingArea, alt: "Kalypso Osijek spacious living area", aspectRatio: "aspect-[4/3]" },
+    { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience", aspectRatio: "aspect-square" },
+    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities", aspectRatio: "aspect-[4/3]" },
+    { src: aboutKalypso, alt: "Kalypso Osijek wellness apartment overview", aspectRatio: "aspect-[3/2]" },
   ];
 
   return (
