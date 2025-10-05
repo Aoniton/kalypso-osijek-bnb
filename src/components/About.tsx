@@ -11,18 +11,18 @@ const About = ({ language }: AboutProps) => {
       title: "Welcome to Kalypso",
       subtitle: "Your Luxury Wellness Retreat",
       description: [
-        "Escape to Kalypso Osijek, where modern luxury meets ultimate relaxation in the heart of Croatia's cultural gem.",
+        "In the center of Osijek, Kalypso offers more than just a stay — it gives you a moment to breathe. The apartment blends comfort, style, and privacy to create the perfect space for couples and those who simply want to relax.",
         "Our exclusive wellness apartment features a private jacuzzi, Finnish sauna, and ambient LED lighting designed to create the perfect romantic atmosphere.",
-        "Whether you're celebrating a special occasion or simply seeking a peaceful retreat, Kalypso offers an unforgettable experience tailored for couples and wellness enthusiasts.",
+        "Whether it’s a romantic getaway or a quiet weekend for yourself, Kalypso makes every stay feel personal and special.",
       ],
     },
     hr: {
       title: "Dobrodošli u Kalypso",
-      subtitle: "Vaše Luksuzno Wellness Utočište",
+      subtitle: "Mjesto za opuštanje i uživanje",
       description: [
-        "Pobjegnite u Kalypso Osijek, gdje se moderna luksuz susreće s ultimativnim opuštanjem u srcu kulturnog dragulja Hrvatske.",
+        "U samom centru Osijeka, Kalypso nije samo smještaj — to je prilika da usporite i odmorite. Apartman spaja udobnost, stil i privatnost, stvarajući savršen prostor za parove i sve koji žele pobjeći od svakodnevice.",
         "Naš ekskluzivni wellness apartman sadrži privatni jacuzzi, finsku saunu i ambijentalno LED osvjetljenje dizajnirano da stvori savršenu romantičnu atmosferu.",
-        "Bilo da proslavljate posebnu priliku ili jednostavno tražite mirno utočište, Kalypso nudi nezaboravno iskustvo prilagođeno parovima i wellness entuzijastima.",
+        "Opustite se u toplom jacuzziju, uživajte u finskoj sauni i pustite da ugodna rasvjeta stvori pravi ugođaj. Bilo da dolazite na romantični bijeg ili miran vikend za sebe, Kalypso čini svaki boravak posebnim.",
       ],
     },
   };
