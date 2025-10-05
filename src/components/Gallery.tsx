@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
-import romanticSetup from "@/assets/romantic-setup.jpg";
 import luxuryBedroom from "@/assets/luxury-bedroom.jpg";
+import romanticSetup from "@/assets/romantic-setup.jpg";
 import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
 import ledLighting from "@/assets/LED-ambient-lighting.jpg";
 import finnishSauna from "@/assets/finnish-sauna.jpg";
