@@ -29,18 +29,18 @@ const Gallery = ({ language }: GalleryProps) => {
   };
 
   const images = [
-    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", aspectRatio: "aspect-[4/3]" },
-    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", aspectRatio: "aspect-[3/2]" },
-    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", aspectRatio: "aspect-[3/2]" },
-    { src: heroKalypso, alt: "Kalypso Osijek luxury wellness apartment exterior", aspectRatio: "aspect-[3/2]" },
-    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", aspectRatio: "aspect-square" },
-    { src: jacuzziPurpleLights, alt: "Kalypso Osijek jacuzzi with purple ambient lights", aspectRatio: "aspect-[3/2]" },
-    { src: livingRoom, alt: "Kalypso Osijek modern living room", aspectRatio: "aspect-[4/3]" },
-    { src: bedroom, alt: "Kalypso Osijek comfortable bedroom", aspectRatio: "aspect-[3/2]" },
-    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", aspectRatio: "aspect-square" },
-    { src: livingArea, alt: "Kalypso Osijek spacious living area", aspectRatio: "aspect-[4/3]" },
-    { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience", aspectRatio: "aspect-square" },
-    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities", aspectRatio: "aspect-[4/3]" },
+    { src: romanticSetup, alt: "Kalypso Osijek romantic setup" },
+    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom" },
+    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior" },
+    { src: heroKalypso, alt: "Kalypso Osijek luxury wellness apartment exterior" },
+    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna" },
+    { src: jacuzziPurpleLights, alt: "Kalypso Osijek jacuzzi with purple ambient lights" },
+    { src: livingRoom, alt: "Kalypso Osijek modern living room" },
+    { src: bedroom, alt: "Kalypso Osijek comfortable bedroom" },
+    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting" },
+    { src: livingArea, alt: "Kalypso Osijek spacious living area" },
+    { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience" },
+    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities" },
   ];
 
   return (
@@ -59,10 +59,10 @@ const Gallery = ({ language }: GalleryProps) => {
           {images.map((image, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-luxury transition-all duration-300 hover:scale-[1.02] cursor-pointer animate-scale-in group"
+              className="overflow-hidden hover:shadow-luxury transition-all duration-300 hover:scale-[1.02] cursor-pointer animate-scale-in group p-0 border-0"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`${image.aspectRatio} overflow-hidden relative`}>
+              <div className="aspect-[4/3] w-full relative">
                 <img 
                   src={image.src} 
                   alt={image.alt}
