@@ -42,7 +42,7 @@ const Hero = ({ language }: HeroProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col justify-end pb-16 md:pb-20 items-center text-center px-4 z-[3]">
+      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-[3]">
         <div className="max-w-[90%] mx-auto">
           <h1 className="text-white text-3xl md:text-6xl font-extrabold leading-tight tracking-wide mb-3 animate-[fade-in_0.8s_ease-out_0.2s_both]">
             {content[language].title}

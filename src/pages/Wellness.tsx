@@ -25,7 +25,7 @@ const Wellness = () => {
   return (
     <div className="min-h-screen">
       <Navbar language={language} onLanguageChange={setLanguage} />
-      <main className="pt-16">
+      <main className="pt-20">
         <section className="py-20 px-4 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16 animate-fade-in">
