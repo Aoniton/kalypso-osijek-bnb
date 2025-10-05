@@ -50,7 +50,7 @@ const Location = ({ language }: LocationProps) => {
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
             {content[language].title}
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-primary">
             {content[language].subtitle}
           </p>
         </div>

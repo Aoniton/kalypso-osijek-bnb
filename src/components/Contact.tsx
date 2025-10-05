@@ -131,7 +131,7 @@ const Contact = ({ language }: ContactProps) => {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground font-semibold py-6 rounded-lg shadow-luxury hover:shadow-glow transition-all duration-300"
+                  className="w-full bg-primary text-primary-foreground font-semibold py-6 rounded-lg shadow-luxury transition-all duration-300 hover:scale-105"
                 >
                   {content[language].form.submit}
                 </Button>
