@@ -16,7 +16,9 @@ const Hero = ({ language }: HeroProps) => {
           A Place Just for You.
         </>
       ),
-      description: "Sink into the jacuzzi, breathe in the sauna's warmth, and let the soft light carry the evening. Every detail is here to help you relax, connect, and enjoy the moment.",
+      description: "Sink into the jacuzzi, breathe in the sauna's warmth, and let the soft light carry the evening. 
+        <br />
+        Every detail is here to help you relax, connect, and enjoy the moment.",
       cta: "Book Now",
       ctaAriaLabel: "Book your stay at Kalypso Osijek",
     },
