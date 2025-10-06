@@ -21,7 +21,7 @@ const Hero = ({ language }: HeroProps) => {
       ctaAriaLabel: "Book your stay at Kalypso Osijek",
     },
     hr: {
-      title: "Skriveni Dragulj",
+      title: "Skriveni dragulj",
       titleLine2: "Osijeka",
       subtitle: (
         <>
