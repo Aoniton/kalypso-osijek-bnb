@@ -30,7 +30,7 @@ const Hero = ({ language }: HeroProps) => {
           Mjesto samo za Vas.
         </>
       ),
-      description: "Uđite i pustite da svijet utihne. Jacuzzi lagano bubri, sauna grije zrak, a nježno svjetlo stvara ugođaj koji traje.",
+      description: "Uđite i pustite da svijet utihne. Jacuzzi lagano žamori, sauna grije zrak, a nježno svjetlo stvara ugođaj koji traje.",
       cta: "Rezerviraj sada",
       ctaAriaLabel: "Rezerviraj boravak u Kalypso Osijeku",
     },
