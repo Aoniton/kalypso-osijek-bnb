@@ -19,7 +19,7 @@ const getInitialLanguage = (): Language => {
     console.error("Error detecting language:", error);
   }
 
-  return "en"; // Default to English
+  return "hr"; // Default to Croatian
 };
 
 export const useLanguage = () => {
