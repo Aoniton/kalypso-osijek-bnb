@@ -23,14 +23,12 @@ const Apartment = () => {
       ),
       
       features: [
-        "🛋️ An airy living room with elegant details and soft furnishings, designed for shared moments of calm, connection, and unhurried enjoyment.",
-        "🛏️ A spacious king-size bed wrapped in soft linens offers complete privacy and deep rest.",
-        "🚿 A modern bathroom with a rainfall shower brings the feeling of a spa retreat — without ever leaving your apartment.",
-        "🧖‍♀️ Your private jacuzzi and Finnish sauna create a personal sanctuary for two — a space for closeness, quiet, and total relaxation.",
-        "✨ Ambient LED lighting lets you shape the atmosphere — from romantic evenings to peaceful escapes where time seems to slow down.",
-        "🍳 A fully equipped kitchenette gives you the freedom to enjoy breakfast or dinner at your own pace, just the way you like it.",
-        "🌡️ Perfect climate control year-round keeps everything just right, no matter the season.",
-        "🌙 Blackout curtains and thoughtful design ensure restful nights and slow, easy mornings.",
+        "Spacious open-plan living area with premium furnishings",
+        "King-size bedroom with luxury bedding",
+        "Modern bathroom with rainfall shower",
+        "Fully equipped kitchenette",
+        "Climate control for year-round comfort",
+        "Blackout curtains for perfect rest",
       ],
     },
     hr: {
@@ -45,14 +43,12 @@ const Apartment = () => {
       ),
       
       features: [
-        "🛋️ Prozračan dnevni boravak s elegantnim detaljima i udobnim namještajem stvoren je za zajedničke trenutke mira, razgovora i uživanja bez žurbe.",
-        "🛏️ Prostrani king size krevet obavijen mekom posteljinom pruža osjećaj potpune privatnosti i odmora.",
-        "🚿 Kupaonica s kišnim tušem donosi doživljaj modernog wellness centra — bez da napustite svoj apartman.",
-        "🧖‍♀️ Privatni jacuzzi i finska sauna nude prostor samo za vas dvoje — za trenutke bliskosti, tišine i dubokog opuštanja.",
-        "✨ Ambijentalno LED osvjetljenje nježno oblikuje atmosferu — od romantičnih večeri do intimnog utočišta gdje vrijeme staje.",
-        "🍳 Potpuno opremljena kuhinja omogućuje vam da bez žurbe uživate u doručku ili večeri, baš onako kako želite.",
-        "🌡️ Ugodna klima tijekom cijele godine čini svaki boravak savršeno ugodnim, neovisno o sezoni.",
-        "🌙 Zamračujuće zavjese i pažljivo osmišljen prostor jamče mirne noći i spora, bezbrižna jutra.",
+        "Prostrani dnevni boravak otvorenog tipa s premium namještajem",
+        "Spavaća soba king size s luksuznom posteljinom",
+        "Moderna kupaonica s kišnim tušem",
+        "Potpuno opremljena kuhinjica",
+        "Klimatizacija za cjelogodišnju udobnost",
+        "Zamračujuće zavjese za savršen odmor",
       ],
     },
   };

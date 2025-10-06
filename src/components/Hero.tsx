@@ -11,8 +11,9 @@ const Hero = ({ language }: HeroProps) => {
       titleLine2: "of Osijek",
       subtitle: (
         <>
-          Modern Luxury
-          <br className="md:hidden" /> in Every Detail
+          Private Luxury.
+          <br />
+          A Place Just for You.
         </>
       ),
       description: "Step inside and let the world quiet down. The jacuzzi hums softly, the sauna wraps you in warmth, and the light glows just enough to make everything feel easy.",
@@ -24,8 +25,9 @@ const Hero = ({ language }: HeroProps) => {
       titleLine2: "Osijeka",
       subtitle: (
         <>
-          Moderan luksuz
-          <br className="md:hidden" /> u svakom detalju
+          Privatni luksuz.
+          <br />
+          Mjesto samo za Vas.
         </>
       ),
       description: "Uđite i pustite da svijet utihne. Jacuzzi lagano žamori, sauna grije zrak, a nježno svjetlo stvara ugođaj koji traje.",

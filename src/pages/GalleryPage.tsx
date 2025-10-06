@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
-import BookNowButton from "@/components/BookNowButton";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const GalleryPage = () => {
@@ -12,7 +11,6 @@ const GalleryPage = () => {
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
         <Gallery language={language} />
-        <BookNowButton language={language} />
       </main>
       <Footer language={language} />
     </div>
