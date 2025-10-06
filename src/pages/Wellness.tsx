@@ -29,7 +29,7 @@ const Wellness = () => {
         <>
           Središnji dio apartmana čini privatna wellness zona — vaš osobni spa, dostupan kad god poželite.<br /><br />
           Hidromasažni jacuzzi opušta svaki mišić i otpušta stres, dok vas finska sauna obavija ugodnom toplinom, savršenom za potpuno opuštanje ili intimne trenutke u dvoje.<br /><br />
-          Doživljaj koji se inače veže uz luksuzne hotele, ovdje je samo vaš.
+          Doživljaj koji se inače veže uz luksuzne hotele, ovdje je samo Vaš.
         </>
       ),
     },
