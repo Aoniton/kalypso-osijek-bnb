@@ -10,7 +10,7 @@ All colors MUST be HSL.
   :root {
     /* Kalypso Romantic Luxury Wellness Design System */
     --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --foreground: 0 0% 5%;
 
     --card: 0 0% 98%;
     --card-foreground: 0 0% 0%;
