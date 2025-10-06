@@ -11,19 +11,18 @@ const About = ({ language }: AboutProps) => {
       title: "Welcome to Kalypso",
       subtitle: "Your Luxury Wellness Retreat",
       description: [
-        "In the center of Osijek, Kalypso offers more than just a stay — it gives you a moment to breathe and connect. The apartment blends comfort, style, and privacy to create the perfect space for couples and those who simply want to relax.",
-        "Our exclusive wellness apartment features a private jacuzzi, Finnish sauna, and ambient LED lighting designed to create the perfect romantic atmosphere.",
-        "Whether it’s a romantic getaway or a quiet weekend for yourself, Kalypso makes every stay feel personal and special.",
+        "Located in the heart of Osijek, Kalypso is more than a place to stay — it's a space carefully created to make you feel like you've escaped the everyday. Every corner was designed to bring you a sense of calm, privacy, and warmth — the kind you look for when you want to slow down and simply be.",
+        "At the center of it all is your private wellness area. A hydromassage jacuzzi and Finnish sauna await, ready to help you unwind at any time. Soft ambient lighting turns the space into a quiet retreat — intimate, soothing, and made for two.",
+        "Kalypso was built for those who want more than just accommodation. For couples seeking a romantic getaway, or anyone craving a peaceful weekend in a city that moves at its own gentle pace — this is a place to pause, breathe, and make memories that stay with you.",
       ],
     },
     hr: {
       title: "Dobrodošli u Kalypso",
       subtitle: "Mjesto za opuštanje i uživanje",
       description: [
-        "U samom centru Osijeka, Kalypso nije samo smještaj — to je prilika da usporite, odmorite i povežete se. Apartman spaja udobnost, stil i privatnost, stvarajući savršen prostor za parove i sve koji žele pobjeći od svakodnevice.",
-        "Naš ekskluzivni wellness apartman sadrži privatni jacuzzi, finsku saunu i ambijentalno LED osvjetljenje dizajnirano da stvori savršenu romantičnu atmosferu.",
-        "Opustite se u toplom jacuzziju, uživajte u finskoj sauni i pustite da ugodna rasvjeta stvori pravi ugođaj.",
-        "Bilo da dolazite na romantični bijeg ili miran vikend za sebe, Kalypso čini svaki boravak posebnim.",
+        "Smješten u samom srcu Osijeka, Kalypso je više od smještaja — to je prostor koji smo stvarali s pažnjom, kako biste se osjećali kao da ste pobjegli iz svakodnevice. Svaki kut apartmana oblikovan je tako da pruži mir, privatnost i toplinu koju tražite kada želite usporiti i jednostavno biti.",
+        "Naš wellness kutak čini srce ovog doživljaja. Privatni hidromasažni jacuzzi i finska sauna spremni su u svakom trenutku pružiti vam potpunu relaksaciju. Uz nježno ambijentalno svjetlo, prostor se pretvara u intimno utočište, idealno za dvoje.",
+        "Kalypso je stvoren za one koji žele više od običnog odmora — za parove koji traže romantični bijeg, ali i za one koji jednostavno žele vikend mira i udobnosti u gradu koji diše posebnim ritmom.",
       ],
     },
   };
