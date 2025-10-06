@@ -16,9 +16,9 @@ const Apartment = () => {
       subtitle: "Modern Luxury in Every Detail",
       description: (
         <>
-          Tucked right in the heart of Osijek, Kalypso Apartment was created with one thing in mind — to give you a place where the outside world simply fades away.<br /><br />
-          From the moment you walk in, the soft lights, thoughtful design, and calm atmosphere make you feel at ease.<br /><br />
-          It's more than a place to stay — it's a space to slow down, reconnect, and enjoy life's little luxuries.
+          In the very heart of Osijek lies Kalypso — a place where the everyday stays at the door, and a rare sense of calm welcomes you inside.<br /><br />
+          Every detail, from the warm lighting to the carefully chosen interior touches, has been designed to create a space that feels soothing, intimate, and comfortable — like coming home, only more refined.<br /><br />
+          It's more than a place to stay — It’s where you slow down, reconnect, and savor moments that linger. Whether you’re looking for a romantic escape for two or a quiet weekend for yourself, Kalypso offers a space where every second carries meaning.
         </>
       ),
       
@@ -37,8 +37,8 @@ const Apartment = () => {
       description: (
         <>
           U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra.<br /><br />
-          Topla rasvjeta, pažljivo osmišljen prostor i mirna atmosfera stvaraju osjećaj doma i opuštenosti.<br /><br />
-          Ovo nije samo smještaj, ovo je prostor u kojem usporavate, ponovno se povezujete i uživate u sitnim luksuzima života.
+          Svaki detalj, od toplog svjetla do pažljivo odabranih elemenata interijera, zamišljen je kako bi prostor djelovao smirujuće, toplo i ugodno — kao da ste došli kući, ali u luksuznijoj verziji.<br /><br />
+          Ovdje ne dolazite samo prespavati. Ovdje dolazite usporiti, ponovno se povezati i uživati u trenucima koji ostaju u sjećanju. Bilo da ste u potrazi za romantičnim bijegom u dvoje ili mirnim vikendom za sebe, Kalypso nudi prostor u kojem svaki trenutak ima svoju težinu i značenje.
         </>
       ),
       
