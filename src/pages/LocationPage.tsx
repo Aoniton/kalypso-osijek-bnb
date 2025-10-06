@@ -1,10 +1,10 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Location from "@/components/Location";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const LocationPage = () => {
-  const [language, setLanguage] = useState<"en" | "hr">("en");
+  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="min-h-screen">

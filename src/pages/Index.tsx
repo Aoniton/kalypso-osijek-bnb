@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -6,11 +5,14 @@ import Features from "@/components/Features";
 import Gallery from "@/components/Gallery";
 import Location from "@/components/Location";
 import Contact from "@/components/Contact";
+import AboutExtended from "@/components/AboutExtended";
+import BookNowButton from "@/components/BookNowButton";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/hooks/useLanguage";
 
 
 const Index = () => {
-  const [language, setLanguage] = useState<"en" | "hr">("en");
+  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="min-h-screen">
@@ -22,6 +24,8 @@ const Index = () => {
         <Gallery language={language} />
         <Location language={language} />
         <Contact language={language} />
+        <AboutExtended language={language} />
+        <BookNowButton language={language} />
       </main>
       <Footer language={language} />
     </div>

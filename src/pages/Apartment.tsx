@@ -1,13 +1,14 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BookNowButton from "@/components/BookNowButton";
 import { Card, CardContent } from "@/components/ui/card";
 import livingArea from "@/assets/living-area.jpg";
 import bedroom from "@/assets/bedroom.jpg";
 import livingRoom from "@/assets/living-room.jpg";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Apartment = () => {
-  const [language, setLanguage] = useState<"en" | "hr">("en");
+  const { language, setLanguage } = useLanguage();
 
   const content = {
     en: {
@@ -15,8 +16,8 @@ const Apartment = () => {
       subtitle: "Modern Luxury in Every Detail",
       description: (
         <>
-          Tucked right in the heart of Osijek, Kalypso Apartment was created with one thing in mind — to give you a place where the outside world simply fades away.<br />
-          From the moment you walk in, the soft lights, thoughtful design, and calm atmosphere make you feel at ease.<br />
+          Tucked right in the heart of Osijek, Kalypso Apartment was created with one thing in mind — to give you a place where the outside world simply fades away.<br /><br />
+          From the moment you walk in, the soft lights, thoughtful design, and calm atmosphere make you feel at ease.<br /><br />
           It's more than a place to stay — it's a space to slow down, reconnect, and enjoy life's little luxuries.
         </>
       ),
@@ -35,8 +36,8 @@ const Apartment = () => {
       subtitle: "Moderan Luksuz u Svakom Detalju",
       description: (
         <>
-          U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra.<br />
-          Topla rasvjeta, pažljivo osmišljen prostor i mirna atmosfera stvaraju osjećaj doma i opuštenosti.<br />
+          U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra.<br /><br />
+          Topla rasvjeta, pažljivo osmišljen prostor i mirna atmosfera stvaraju osjećaj doma i opuštenosti.<br /><br />
           Ovo nije samo smještaj, ovo je prostor u kojem usporavate, ponovno se povezujete i uživate u sitnim luksuzima života.
         </>
       ),
@@ -122,6 +123,7 @@ const Apartment = () => {
           </div>
         </section>
       </main>
+      <BookNowButton language={language} />
       <Footer language={language} />
     </div>
   );
