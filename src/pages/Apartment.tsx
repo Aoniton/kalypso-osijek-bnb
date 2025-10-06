@@ -13,7 +13,14 @@ const Apartment = () => {
     en: {
       title: "The Apartment",
       subtitle: "Modern Luxury in Every Detail",
-      description: "Kalypso Osijek is a thoughtfully designed luxury wellness apartment that combines modern aesthetics with ultimate comfort. Every element has been carefully selected to create an atmosphere of sophistication and relaxation.",
+      description: [
+        "Tucked right in the heart of Osijek, Kalypso Apartment was created with one thing in mind — to give you a place where the outside world simply fades away. From the moment you walk in, the soft lights, thoughtful design, and calm atmosphere make you feel at ease. It’s more than a place to stay — it’s a space to slow down, reconnect, and enjoy life’s little luxuries.",
+        "The centerpiece of the apartment is the private wellness area — your own intimate spa, ready whenever you are. The hydromassage jacuzzi melts away stress with every bubble, while the Finnish sauna wraps you in soothing warmth, perfect for unwinding after a long day or sharing a quiet moment with someone special. It’s an experience usually reserved for luxury resorts, now entirely yours.",
+        "Every corner of the apartment was carefully designed to offer both comfort and elegance. The open-plan living area feels spacious yet cozy, perfect for quiet evenings in or celebrating special moments. The king-size bed is dressed in soft, high-quality bedding that makes every night feel like a stay in a five-star hotel.",
+        "The modern bathroom features a rainfall shower that washes away the day, while the fully equipped kitchenette lets you prepare a relaxed breakfast or a romantic dinner without ever leaving the comfort of your retreat.",
+        "No matter the season, the apartment’s climate control keeps the space at just the right temperature, and blackout curtains ensure a restful night’s sleep. From warm lighting to the smallest decorative details, everything was chosen to make your stay as comfortable and memorable as possible.",
+      ],
+      
       features: [
         "Spacious open-plan living area with premium furnishings",
         "King-size bedroom with luxury bedding",
@@ -25,8 +32,15 @@ const Apartment = () => {
     },
     hr: {
       title: "Apartman",
-      subtitle: "Moderna Luksuz u Svakom Detalju",
-      description: "Kalypso Osijek je promišljeno dizajnirani luksuzni wellness apartman koji kombinira modernu estetiku s ultimativnom udobnošću. Svaki element je pažljivo odabran kako bi stvorio atmosferu sofisticiranosti i opuštanja.",
+      subtitle: "Moderan Luksuz u Svakom Detalju",
+      description: [
+        "U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra. Topla rasvjeta, pažljivo osmišljen prostor i mirna atmosfera stvaraju osjećaj doma i opuštenosti. Ovo nije samo smještaj, ovo je prostor u kojem usporavate, ponovno se povezujete i uživate u sitnim luksuzima života.",
+        "Središnji dio apartmana čini privatna wellness zona — vaš osobni spa, dostupan kad god poželite. Hidromasažni jacuzzi opušta svaki mišić i otpušta stres, dok vas finska sauna obavija ugodnom toplinom, savršenom za potpuno opuštanje ili intimne trenutke u dvoje. Doživljaj koji se inače veže uz luksuzne hotele, ovdje je samo vaš.",
+        "Svaki detalj apartmana pažljivo je biran kako bi spojio udobnost i eleganciju. Prostrani dnevni boravak odiše toplinom i savršen je za mirne večeri ili posebne trenutke s voljenima. King size krevet s mekanom, kvalitetnom posteljinom pruža osjećaj boravka u vrhunskom hotelu — samo s više privatnosti i mira.",
+        "Moderna kupaonica s kišnim tušem pruža osjećaj potpune relaksacije, dok vam potpuno opremljena kuhinjica omogućuje da bez žurbe pripremite doručak ili romantičnu večeru, bez potrebe da napuštate svoj kutak mira.",
+        "Bez obzira na godišnje doba, klimatizacija održava savršenu temperaturu, a zamračujuće zavjese osiguravaju dubok i miran san. Od rasvjete do dekorativnih detalja, svaki element pažljivo je odabran kako bi vaš boravak bio što ugodniji i posebniji.",
+      ],
+      
       features: [
         "Prostrani dnevni boravak otvorenog tipa s premium namještajem",
         "Spavaća soba king size s luksuznom posteljinom",
