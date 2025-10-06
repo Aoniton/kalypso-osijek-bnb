@@ -11,6 +11,7 @@ import GalleryPage from "./pages/GalleryPage";
 import LocationPage from "./pages/LocationPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import BackToTop from "./components/BackToTop";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <BackToTop />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
