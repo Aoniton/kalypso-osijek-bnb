@@ -24,7 +24,7 @@ const Wellness = () => {
     },
     hr: {
       title: "Wellness Iskustvo",
-      subtitle: "Opustite Se, Podmlađivanje, Romansa",
+      subtitle: "Opuštanje, Podmlađivanje, Romansa",
       intro: (
         <>
           Središnji dio apartmana čini privatna wellness zona — vaš osobni spa, dostupan kad god poželite.<br /><br />
