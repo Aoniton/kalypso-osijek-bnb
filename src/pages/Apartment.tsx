@@ -13,7 +13,13 @@ const Apartment = () => {
     en: {
       title: "The Apartment",
       subtitle: "Modern Luxury in Every Detail",
-      description: "Tucked right in the heart of Osijek, Kalypso Apartment was created with one thing in mind — to give you a place where the outside world simply fades away. From the moment you walk in, the soft lights, thoughtful design, and calm atmosphere make you feel at ease. It’s more than a place to stay — it’s a space to slow down, reconnect, and enjoy life’s little luxuries.",
+      description: (
+        <>
+          Tucked right in the heart of Osijek, Kalypso Apartment was created with one thing in mind — to give you a place where the outside world simply fades away.<br />
+          From the moment you walk in, the soft lights, thoughtful design, and calm atmosphere make you feel at ease.<br />
+          It's more than a place to stay — it's a space to slow down, reconnect, and enjoy life's little luxuries.
+        </>
+      ),
       
       features: [
         "Spacious open-plan living area with premium furnishings",
@@ -27,7 +33,13 @@ const Apartment = () => {
     hr: {
       title: "Apartman",
       subtitle: "Moderan Luksuz u Svakom Detalju",
-      description: "U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra. Topla rasvjeta, pažljivo osmišljen prostor i mirna atmosfera stvaraju osjećaj doma i opuštenosti. Ovo nije samo smještaj, ovo je prostor u kojem usporavate, ponovno se povezujete i uživate u sitnim luksuzima života.",
+      description: (
+        <>
+          U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra.<br />
+          Topla rasvjeta, pažljivo osmišljen prostor i mirna atmosfera stvaraju osjećaj doma i opuštenosti.<br />
+          Ovo nije samo smještaj, ovo je prostor u kojem usporavate, ponovno se povezujete i uživate u sitnim luksuzima života.
+        </>
+      ),
       
       features: [
         "Prostrani dnevni boravak otvorenog tipa s premium namještajem",
@@ -57,7 +69,7 @@ const Apartment = () => {
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6 animate-slide-in-left">
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide px-4 md:px-0 font-light">
                   {content[language].description}
                 </p>
                 
