@@ -73,6 +73,8 @@ const Wellness = () => {
                 </div>
               </Card>
             </div>
+
+            <BookNowButton language={language} />
           </div>
         </section>
 
