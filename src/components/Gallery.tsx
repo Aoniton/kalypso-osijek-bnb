@@ -12,6 +12,26 @@ import livingArea from "@/assets/living-area.jpg";
 import livingRoom from "@/assets/living-room.jpg";
 import saunaPhoto from "@/assets/sauna-photo.jpg";
 import aboutKalypso from "@/assets/about-kalypso.jpg";
+import balcony from "@/assets/balcony.jpg";
+import bedroom1 from "@/assets/bedroom1.jpg";
+import bedroom2 from "@/assets/bedroom2.jpg";
+import dinning from "@/assets/dinning.jpg";
+import entrance from "@/assets/entrance.jpg";
+import girls from "@/assets/girls.jpg";
+import girlsdrink from "@/assets/girlsdrink.jpg";
+import girlsinbed from "@/assets/girlsinbed.jpg";
+import girlwithbook from "@/assets/girlwithbook.jpg";
+import jacuzzi from "@/assets/jacuzzi.jpg";
+import jacuzzi1 from "@/assets/jacuzzi1.jpg";
+import kitchen from "@/assets/kitchen.jpg";
+import kitchen1 from "@/assets/kitchen1.jpg";
+import kitchen2 from "@/assets/kitchen2.jpg";
+import lounge from "@/assets/lounge.jpg";
+import pinkroom from "@/assets/pinkroom.jpg";
+import sauna from "@/assets/sauna.jpg";
+import shower from "@/assets/shower.jpg";
+import view from "@/assets/view.jpg";
+import womanSauna from "@/assets/woman-sauna.jpg";
 
 interface GalleryProps {
   language: "en" | "hr";
@@ -44,6 +64,26 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
     { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience", usedInText: true },
     { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities", usedInText: false },
     { src: aboutKalypso, alt: "Kalypso Osijek luxury wellness apartment", usedInText: false },
+    { src: balcony, alt: "Kalypso Osijek balcony view", usedInText: false },
+    { src: bedroom1, alt: "Kalypso Osijek bedroom interior", usedInText: false },
+    { src: bedroom2, alt: "Kalypso Osijek elegant bedroom", usedInText: false },
+    { src: dinning, alt: "Kalypso Osijek dining area", usedInText: false },
+    { src: entrance, alt: "Kalypso Osijek apartment entrance", usedInText: false },
+    { src: girls, alt: "Kalypso Osijek guests enjoying the apartment", usedInText: false },
+    { src: girlsdrink, alt: "Kalypso Osijek relaxing with drinks", usedInText: false },
+    { src: girlsinbed, alt: "Kalypso Osijek comfortable bedroom experience", usedInText: false },
+    { src: girlwithbook, alt: "Kalypso Osijek relaxing reading area", usedInText: false },
+    { src: jacuzzi, alt: "Kalypso Osijek luxury jacuzzi", usedInText: false },
+    { src: jacuzzi1, alt: "Kalypso Osijek jacuzzi wellness area", usedInText: false },
+    { src: kitchen, alt: "Kalypso Osijek modern kitchen", usedInText: false },
+    { src: kitchen1, alt: "Kalypso Osijek kitchen interior", usedInText: false },
+    { src: kitchen2, alt: "Kalypso Osijek fully equipped kitchen", usedInText: false },
+    { src: lounge, alt: "Kalypso Osijek lounge area", usedInText: false },
+    { src: pinkroom, alt: "Kalypso Osijek pink themed room", usedInText: false },
+    { src: sauna, alt: "Kalypso Osijek sauna interior", usedInText: false },
+    { src: shower, alt: "Kalypso Osijek modern shower", usedInText: false },
+    { src: view, alt: "Kalypso Osijek scenic view", usedInText: false },
+    { src: womanSauna, alt: "Kalypso Osijek sauna relaxation", usedInText: false },
   ];
 
   const images = excludeTextBlockImages 
