@@ -11,14 +11,12 @@ import jacuzziPurpleLights from "@/assets/jacuzzi-purple-lights.jpg";
 import livingArea from "@/assets/living-area.jpg";
 import livingRoom from "@/assets/living-room.jpg";
 import saunaPhoto from "@/assets/sauna-photo.jpg";
-import aboutKalypso from "@/assets/about-kalypso.jpg";
 
 interface GalleryProps {
   language: "en" | "hr";
-  excludeTextBlockImages?: boolean;
-}
+} 
 
-const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => {
+const Gallery = ({ language }: GalleryProps) => {
   const content = {
     en: {
       title: "Gallery",
@@ -30,25 +28,20 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
     },
   };
 
-  const allImages = [
-    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", usedInTextBlock: true },
-    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", usedInTextBlock: true },
-    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", usedInTextBlock: false },
-    { src: livingRoom, alt: "Kalypso Osijek modern living room", usedInTextBlock: true },
-    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", usedInTextBlock: false },
-    { src: jacuzziPurpleLights, alt: "Kalypso Osijek jacuzzi with purple ambient lights", usedInTextBlock: true },
-    { src: heroKalypso, alt: "Kalypso Osijek luxury wellness apartment exterior", usedInTextBlock: true },
-    { src: bedroom, alt: "Kalypso Osijek comfortable bedroom", usedInTextBlock: true },
-    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", usedInTextBlock: false },
-    { src: livingArea, alt: "Kalypso Osijek spacious living area", usedInTextBlock: true },
-    { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience", usedInTextBlock: true },
-    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities", usedInTextBlock: false },
-    { src: aboutKalypso, alt: "Kalypso Osijek wellness apartment about", usedInTextBlock: false },
+  const images = [
+    { src: romanticSetup, alt: "Kalypso Osijek romantic setup" },
+    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom" },
+    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior" },
+    { src: livingRoom, alt: "Kalypso Osijek modern living room" },
+    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna" },
+    { src: jacuzziPurpleLights, alt: "Kalypso Osijek jacuzzi with purple ambient lights" },
+    { src: heroKalypso, alt: "Kalypso Osijek luxury wellness apartment exterior" },
+    { src: bedroom, alt: "Kalypso Osijek comfortable bedroom" },
+    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting" },
+    { src: livingArea, alt: "Kalypso Osijek spacious living area" },
+    { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience" },
+    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities" },
   ];
-
-  const images = excludeTextBlockImages 
-    ? allImages.filter(img => !img.usedInTextBlock)
-    : allImages;
 
   return (
     <section className="py-20 px-4 bg-background">
