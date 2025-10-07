@@ -26,7 +26,25 @@ const FAQ = () => {
         },
         {
           question: "💰 What is the price per night?",
-          answer: "The apartment is available for one-night stays only.\nFor the exact price of your desired date, please send us a message via Facebook, Instagram, or email — we respond quickly and keep the booking process smooth and personal."
+          answer: (
+            <>
+              The apartment is available for one-night stays only.
+              <br />
+              For the exact price of your desired date, please send us a message via{" "}
+              <a href="https://www.facebook.com/share/15W3pMqQ7j/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Facebook
+              </a>
+              ,{" "}
+              <a href="https://www.instagram.com/kalypso.osijek/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Instagram
+              </a>
+              , or{" "}
+              <a href="mailto:zvone098@net.hr" className="text-primary hover:underline">
+                email
+              </a>
+              {" "}— we respond quickly and keep the booking process smooth and personal.
+            </>
+          )
         },
         {
           question: "👥 How many guests can stay in the apartment?",
@@ -34,7 +52,7 @@ const FAQ = () => {
         },
         {
           question: "📹 Is there video surveillance?",
-          answer: "Yes. For your security, there are two cameras installed:\n\n• One at the entrance door\n• One outside, overlooking the parking area\n\nThere are no cameras inside the apartment, ensuring your privacy at all times."
+          answer: "Yes. For your security, there are two cameras installed:\n\n• One at the entrance door\n\n• One outside, overlooking the parking area\n\nThere are no cameras inside the apartment, ensuring your privacy at all times."
         },
         {
           question: "🏢 Which floor is the apartment on?",
@@ -42,7 +60,7 @@ const FAQ = () => {
         },
         {
           question: "🚭 Is smoking allowed?",
-          answer: "Smoking is not allowed inside the apartment, except in clearly marked areas:\n\n• The enclosed large balcony\n• The small open balcony"
+          answer: "Smoking is not allowed inside the apartment, except in clearly marked areas:\n\n• The enclosed large balcony\n\n• The small open balcony"
         },
         {
           question: "⭐ How many stars does the apartment have?",
@@ -64,7 +82,29 @@ const FAQ = () => {
         },
         {
           question: "💰 Koja je cijena noćenja?",
-          answer: "Apartman se iznajmljuje isključivo za jednodnevni boravak.\nZa točnu cijenu željenog termina, pošaljite nam upit putem Facebooka, Instagrama, e-maila ili nas jednostavno nazovite — brzo odgovaramo i sve dogovaramo jednostavno i bez stresa."
+          answer: (
+            <>
+              Apartman se iznajmljuje isključivo za jednodnevni boravak.
+              <br />
+              Za točnu cijenu željenog termina, pošaljite nam upit putem{" "}
+              <a href="https://www.facebook.com/share/15W3pMqQ7j/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Facebooka
+              </a>
+              ,{" "}
+              <a href="https://www.instagram.com/kalypso.osijek/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Instagrama
+              </a>
+              ,{" "}
+              <a href="mailto:zvone098@net.hr" className="text-primary hover:underline">
+                e-maila
+              </a>
+              {" "}ili nas jednostavno{" "}
+              <a href="tel:+385914446571" className="text-primary hover:underline">
+                nazovite
+              </a>
+              {" "}— brzo odgovaramo i sve dogovaramo jednostavno i bez stresa.
+            </>
+          )
         },
         {
           question: "👥 Koliko gostiju može boraviti u apartmanu?",
@@ -72,7 +112,7 @@ const FAQ = () => {
         },
         {
           question: "📹 Postoji li video nadzor?",
-          answer: "Da. Radi vaše sigurnosti, postavljene su dvije kamere:\n\n• Jedna kod ulaznih vrata\n• Jedna vanjska kamera koja snima parking neposredno ispred zgrade\n\nU unutrašnjosti apartmana nema kamera, tako da je vaša privatnost potpuno zaštićena."
+          answer: "Da. Radi vaše sigurnosti, postavljene su dvije kamere:\n\n• Jedna kod ulaznih vrata\n\n• Jedna vanjska kamera koja snima parking neposredno ispred zgrade\n\nU unutrašnjosti apartmana nema kamera, tako da je vaša privatnost potpuno zaštićena."
         },
         {
           question: "🏢 Na kojem katu se nalazi apartman?",
@@ -80,7 +120,7 @@ const FAQ = () => {
         },
         {
           question: "🚭 Smije li se pušiti u apartmanu?",
-          answer: "U apartmanu nije dopušteno pušenje, osim na jasno označenim mjestima:\n\n• Zatvoreni veliki balkon\n• Mali otvoreni balkon"
+          answer: "U apartmanu nije dopušteno pušenje, osim na jasno označenim mjestima:\n\n• Zatvoreni veliki balkon\n\n• Mali otvoreni balkon"
         },
         {
           question: "⭐ Koliko zvjezdica ima apartman?",
@@ -117,7 +157,7 @@ const FAQ = () => {
                       {faq.question}
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-6">
+                  <AccordionContent className="text-muted-foreground pb-6 whitespace-pre-line">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
