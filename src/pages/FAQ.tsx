@@ -31,11 +31,11 @@ const FAQ = () => {
               The apartment is available for one-night stays only.
               <br />
               For the exact price of your desired date, please send us a message via{" "}
-              <a href="https://www.facebook.com/share/15W3pMqQ7j/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://www.facebook.com/kalypso.osijek" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 Facebook
               </a>
               ,{" "}
-              <a href="https://www.instagram.com/kalypso.osijek/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://www.instagram.com/wellness_apartment_kalypso/?hl=en" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 Instagram
               </a>
               , or{" "}
@@ -87,11 +87,11 @@ const FAQ = () => {
               Apartman se iznajmljuje isključivo za jednodnevni boravak.
               <br />
               Za točnu cijenu željenog termina, pošaljite nam upit putem{" "}
-              <a href="https://www.facebook.com/share/15W3pMqQ7j/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://www.facebook.com/kalypso.osijek" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 Facebooka
               </a>
               ,{" "}
-              <a href="https://www.instagram.com/kalypso.osijek/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+              <a href="https://www.instagram.com/wellness_apartment_kalypso/?hl=en" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                 Instagrama
               </a>
               ,{" "}
