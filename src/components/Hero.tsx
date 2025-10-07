@@ -75,7 +75,7 @@ const Hero = ({ language }: HeroProps) => {
           </p>
           <div className="flex justify-center animate-[fade-in_0.8s_ease-out_0.8s_both]">
             <a
-              href="#contact"
+              href="/contact"
               className="w-full max-w-[280px] inline-flex items-center justify-center font-medium py-3 rounded-xl shadow-lg shadow-pink-500/30 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/40 active:scale-95 transition-all duration-300 ease-out"
               style={{ backgroundColor: '#e75f91', color: 'white' }}
               aria-label={content[language].ctaAriaLabel}

@@ -82,7 +82,7 @@ const Contact = ({ language }: ContactProps) => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="shadow-luxury animate-slide-in-left">
             <CardContent className="p-8">
