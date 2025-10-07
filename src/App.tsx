@@ -11,6 +11,7 @@ import GalleryPage from "./pages/GalleryPage";
 import LocationPage from "./pages/LocationPage";
 import ContactPage from "./pages/ContactPage";
 import AboutUs from "./pages/AboutUs";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import BackToTop from "./components/BackToTop";
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/location" element={<LocationPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -30,6 +30,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "Gallery", path: "/gallery" },
       { label: "Location", path: "/location" },
       { label: "Contact", path: "/contact" },
+      { label: "FAQ", path: "/faq" },
       { label: "About Us", path: "/about" },
     ],
     hr: [
@@ -38,6 +39,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "Galerija", path: "/gallery" },
       { label: "Lokacija", path: "/location" },
       { label: "Kontakt", path: "/contact" },
+      { label: "ČPP", path: "/faq" },
       { label: "O nama", path: "/about" },
     ],
   };
@@ -71,25 +73,25 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                   }`}>Osijek</span>
                 </div>
                 <div className="flex flex-col items-center gap-0.5">
-                  <div className="flex gap-0.5">
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                  </div>
-                  <div className="flex gap-0.5">
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                  </div>
                   <Star className={`w-2.5 h-2.5 fill-current ${
                     !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
                   }`} />
+                  <div className="flex gap-0.5">
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                  </div>
+                  <div className="flex gap-0.5">
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                  </div>
                 </div>
               </div>
               <span className={`text-xs font-medium transition-colors ${
@@ -99,7 +101,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navItems[language].map((item) => (
               <Link
                 key={item.path}

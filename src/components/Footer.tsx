@@ -14,6 +14,7 @@ const Footer = ({ language }: FooterProps) => {
       { label: "Gallery", path: "/gallery" },
       { label: "Location", path: "/location" },
       { label: "Contact", path: "/contact" },
+      { label: "FAQ", path: "/faq" },
       { label: "About Us", path: "/about" },
     ],
     hr: [
@@ -22,6 +23,7 @@ const Footer = ({ language }: FooterProps) => {
       { label: "Galerija", path: "/gallery" },
       { label: "Lokacija", path: "/location" },
       { label: "Kontakt", path: "/contact" },
+      { label: "ČPP", path: "/faq" },
       { label: "O nama", path: "/about" },
     ],
   };
@@ -60,15 +62,15 @@ const Footer = ({ language }: FooterProps) => {
                     </h3>
                   </div>
                   <div className="flex flex-col items-center gap-0.5">
-                    <div className="flex gap-0.5">
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                    </div>
-                    <div className="flex gap-0.5">
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                    </div>
                     <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                    <div className="flex gap-0.5">
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                    </div>
+                    <div className="flex gap-0.5">
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                    </div>
                   </div>
                 </div>
                 <span className="text-xs font-medium text-secondary-foreground">Wellness Apartment</span>
