@@ -17,44 +17,48 @@ const FAQ = () => {
       subtitle: "Everything You Need to Know About Your Stay",
       faqs: [
         {
-          question: "What amenities are included in the apartment?",
-          answer: "The apartment features a private jacuzzi, Finnish sauna, LED ambient lighting, luxury bedroom, fully equipped kitchen, modern bathroom, high-speed WiFi, smart TV, and climate control. All amenities are included in your booking."
-        },
-        {
-          question: "How many guests can the apartment accommodate?",
-          answer: "The apartment is designed for 2 guests, making it perfect for couples seeking a romantic getaway or anyone looking for a private wellness retreat."
+          question: "How many stars does the apartment have?",
+          answer: "The apartment has a 5-star rating."
         },
         {
           question: "What are the check-in and check-out times?",
-          answer: "Standard check-in is from 3:00 PM and check-out is until 11:00 AM. Early check-in or late check-out may be available upon request, subject to availability."
+          answer: "Check-in is from 18:00 to 19:00, and check-out is the next day by 12:00."
         },
         {
           question: "Is parking available?",
-          answer: "Yes, free private parking is available for guests directly at the property."
+          answer: "There is no private parking, but public zone parking is available nearby."
+        },
+        {
+          question: "What is the price?",
+          answer: "The apartment is rented exclusively for one-day rentals. For the price of your desired date, please send an inquiry via Facebook, Instagram, or email."
+        },
+        {
+          question: "What is the maximum number of guests allowed in the apartment?",
+          answer: "Maximum 4 people. The rental price is higher for more guests. Every person must be registered, even if they are just a guest."
+        },
+        {
+          question: "Is there video surveillance in the apartment?",
+          answer: "Yes. There is one camera at the entrance door and one external camera recording the parking area directly in front of the apartment."
+        },
+        {
+          question: "Which floor is the apartment on?",
+          answer: "The apartment is on the third floor of a residential building. There is no elevator in the building."
+        },
+        {
+          question: "Is smoking allowed in the apartment?",
+          answer: "Smoking is not allowed in the apartment, except in designated areas that are clearly marked: the enclosed large balcony and one small open balcony."
+        },
+        {
+          question: "What amenities are included in the apartment?",
+          answer: "The apartment features a private jacuzzi, Finnish sauna, LED ambient lighting, luxury bedroom, fully equipped kitchen, modern bathroom, high-speed WiFi, smart TV, and climate control. All amenities are included in your booking."
         },
         {
           question: "How do I make a reservation?",
           answer: "You can contact us directly via phone at +385 91 444 6571 or email us at zvone098@net.hr. We'll be happy to check availability and confirm your booking."
         },
         {
-          question: "What is your cancellation policy?",
-          answer: "Our cancellation policy varies depending on the booking. Please contact us directly to discuss the terms for your specific reservation."
-        },
-        {
-          question: "Are pets allowed?",
-          answer: "Unfortunately, we do not allow pets in the apartment to maintain the highest standards of cleanliness and comfort for all our guests."
-        },
-        {
-          question: "Is smoking allowed?",
-          answer: "The apartment is completely non-smoking. Smoking is not permitted anywhere inside the property."
-        },
-        {
           question: "What attractions are nearby?",
           answer: "The apartment is located in the heart of Osijek, close to the historic Tvrđa fortress, beautiful riverside promenades, excellent restaurants, cafes, and cultural sites. Everything is within walking distance or a short drive."
-        },
-        {
-          question: "Do you provide breakfast or other meals?",
-          answer: "The apartment features a fully equipped kitchen where you can prepare your own meals. We don't provide meal service, but we're happy to recommend excellent local restaurants nearby."
         },
         {
           question: "Is the jacuzzi and sauna available 24/7?",
@@ -63,6 +67,10 @@ const FAQ = () => {
         {
           question: "What should I bring?",
           answer: "We provide towels, bed linens, and basic toiletries. You may want to bring your personal items, swimwear for the jacuzzi, and any specific products you prefer."
+        },
+        {
+          question: "Are pets allowed?",
+          answer: "Unfortunately, we do not allow pets in the apartment to maintain the highest standards of cleanliness and comfort for all our guests."
         }
       ]
     },
@@ -71,44 +79,48 @@ const FAQ = () => {
       subtitle: "Sve što trebate znati o Vašem boravku",
       faqs: [
         {
-          question: "Koje sadržaje uključuje apartman?",
-          answer: "Apartman nudi privatni jacuzzi, finsku saunu, LED ambijentalno osvjetljenje, luksuznu spavaću sobu, potpuno opremljenu kuhinju, modernu kupaonicu, brzi WiFi, pametni TV i klimu. Svi sadržaji su uključeni u cijenu rezervacije."
-        },
-        {
-          question: "Koliko gostiju može primiti apartman?",
-          answer: "Apartman je dizajniran za 2 gosta, što ga čini savršenim za parove koji traže romantični bijeg ili bilo koga tko želi privatno wellness iskustvo."
+          question: "Koliko zvjezdica ima apartman?",
+          answer: "Apartman ima 5 zvjezdica."
         },
         {
           question: "Koja su vremena prijave i odjave?",
-          answer: "Standardna prijava je od 15:00 sati, a odjava do 11:00 sati. Rana prijava ili kasna odjava mogu biti dostupne na zahtjev, ovisno o raspoloživosti."
+          answer: "Check-in je od 18:00 do 19:00, a check-out je drugi dan do 12:00."
         },
         {
           question: "Je li parking dostupan?",
-          answer: "Da, besplatan privatni parking dostupan je gostima direktno uz objekt."
+          answer: "Nema privatni parking, ali ima u javnoj zoni parkinga u blizini."
+        },
+        {
+          question: "Koja je cijena?",
+          answer: "Apartman se iznajmljuje isključivo za jednodnevni najam. Za cijenu Vašeg željenog datuma pošaljite upit na Facebook, Instagram ili na email."
+        },
+        {
+          question: "Koliki je maksimalni broj gostiju dopušten u apartmanu?",
+          answer: "Maksimalno 4 osobe. Cijena najma je veća za više osoba. Svaka osoba mora biti prijavljena, čak i u slučaju da je samo gost."
+        },
+        {
+          question: "Ima li u apartmanu video nadzor?",
+          answer: "Ima. Jedna kamera na ulaznim vratima i jedna vanjska kamera koja snima parking neposredno ispred apartmana."
+        },
+        {
+          question: "Na kojem katu je apartman?",
+          answer: "Apartman je na trećem katu stambene zgrade. U zgradi nema lifta."
+        },
+        {
+          question: "Smije li se u apartmanu pušiti?",
+          answer: "U apartmanu nije dopušteno pušenje, osim na za to predviđenim mjestima koja su jasno označena, a ta su: zatvoreni veliki balkon i jedan mali otvoreni balkon."
+        },
+        {
+          question: "Koje sadržaje uključuje apartman?",
+          answer: "Apartman nudi privatni jacuzzi, finsku saunu, LED ambijentalno osvjetljenje, luksuznu spavaću sobu, potpuno opremljenu kuhinju, modernu kupaonicu, brzi WiFi, pametni TV i klimu. Svi sadržaji su uključeni u cijenu rezervacije."
         },
         {
           question: "Kako mogu napraviti rezervaciju?",
           answer: "Možete nas kontaktirati telefonom na +385 91 444 6571 ili putem emaila na zvone098@net.hr. Rado ćemo provjeriti dostupnost i potvrditi Vašu rezervaciju."
         },
         {
-          question: "Koja je politika otkazivanja?",
-          answer: "Naša politika otkazivanja varira ovisno o rezervaciji. Molimo kontaktirajte nas direktno kako bismo razgovarali o uvjetima za Vašu specifičnu rezervaciju."
-        },
-        {
-          question: "Jesu li kućni ljubimci dozvoljeni?",
-          answer: "Nažalost, ne dozvoljavamo kućne ljubimce u apartmanu kako bismo održali najviše standarde čistoće i udobnosti za sve naše goste."
-        },
-        {
-          question: "Je li pušenje dozvoljeno?",
-          answer: "Apartman je u potpunosti nepušački. Pušenje nije dozvoljeno nigdje unutar objekta."
-        },
-        {
           question: "Koje atrakcije su u blizini?",
           answer: "Apartman se nalazi u srcu Osijeka, blizu povijesne Tvrđe, prekrasnih riječnih šetališta, izvrsnih restorana, kafića i kulturnih znamenitosti. Sve je dostupno pješice ili kratkom vožnjom."
-        },
-        {
-          question: "Nudite li doručak ili druge obroke?",
-          answer: "Apartman ima potpuno opremljenu kuhinju gdje možete pripremiti svoje obroke. Ne nudimo uslugu prehrane, ali rado ćemo preporučiti izvrsne lokalne restorane u blizini."
         },
         {
           question: "Je li jacuzzi i sauna dostupni 24/7?",
@@ -117,6 +129,10 @@ const FAQ = () => {
         {
           question: "Što trebam ponijeti?",
           answer: "Mi osiguravamo ručnike, posteljinu i osnovne toaletne potrepštine. Možete ponijeti svoje osobne stvari, kupaći kostim za jacuzzi i proizvode koje preferirate."
+        },
+        {
+          question: "Jesu li kućni ljubimci dozvoljeni?",
+          answer: "Nažalost, ne dozvoljavamo kućne ljubimce u apartmanu kako bismo održali najviše standarde čistoće i udobnosti za sve naše goste."
         }
       ]
     }
