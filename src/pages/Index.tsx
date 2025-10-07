@@ -5,6 +5,7 @@ import Features from "@/components/Features";
 import Gallery from "@/components/Gallery";
 import Location from "@/components/Location";
 import Contact from "@/components/Contact";
+import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -22,6 +23,7 @@ const Index = () => {
         <Gallery language={language} excludeTextBlockImages={true} />
         <Location language={language} />
         <Contact language={language} />
+        <Reviews language={language} />
       </main>
       <Footer language={language} />
     </div>

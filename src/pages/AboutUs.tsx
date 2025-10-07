@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -66,6 +67,7 @@ const AboutUs = () => {
             </p>
           </div>
         </section>
+        <Reviews language={language} />
       </main>
       <Footer language={language} />
     </div>
