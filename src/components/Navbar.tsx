@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Star } from "lucide-react";
+import logo from "@/assets/zvone-logo.png";
 
 interface NavbarProps {
   language: "en" | "hr";
@@ -30,6 +31,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "Gallery", path: "/gallery" },
       { label: "Location", path: "/location" },
       { label: "Contact", path: "/contact" },
+      { label: "About Us", path: "/about" },
     ],
     hr: [
       { label: "Početna", path: "/" },
@@ -38,6 +40,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "Galerija", path: "/gallery" },
       { label: "Lokacija", path: "/location" },
       { label: "Kontakt", path: "/contact" },
+      { label: "O nama", path: "/about" },
     ],
   };
 
@@ -52,11 +55,30 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className={`text-2xl font-heading font-bold transition-colors ${
-            !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
-          }`}>
-            <span className="text-primary">KALYPSO</span> <span className={!isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"}>Osijek</span>
+          {/* Logo & Brand */}
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={logo} 
+              alt="Kalypso Osijek Wellness Apartment logo" 
+              className={`h-12 w-auto transition-all ${!isHomePage || isScrolled ? "brightness-100" : "brightness-0 invert"}`}
+            />
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5">
+                <span className={`text-lg font-heading font-bold transition-colors ${
+                  !isHomePage || isScrolled ? "text-primary" : "text-primary-foreground"
+                }`}>Kalypso Osijek</span>
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-3 h-3 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                  ))}
+                </div>
+              </div>
+              <span className={`text-xs font-medium transition-colors ${
+                !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
+              }`}>Wellness Apartment</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

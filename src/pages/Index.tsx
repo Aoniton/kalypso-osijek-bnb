@@ -5,8 +5,6 @@ import Features from "@/components/Features";
 import Gallery from "@/components/Gallery";
 import Location from "@/components/Location";
 import Contact from "@/components/Contact";
-import AboutExtended from "@/components/AboutExtended";
-import BookNowButton from "@/components/BookNowButton";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -24,8 +22,6 @@ const Index = () => {
         <Gallery language={language} />
         <Location language={language} />
         <Contact language={language} />
-        <AboutExtended language={language} />
-        <BookNowButton language={language} />
       </main>
       <Footer language={language} />
     </div>

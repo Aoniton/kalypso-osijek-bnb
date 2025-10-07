@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import aboutImage from "@/assets/about-kalypso.jpg";
+import livingRoomImage from "@/assets/living-room.jpg";
+import romanticSetupImage from "@/assets/romantic-setup.jpg";
 
 interface AboutProps {
   language: "en" | "hr";
@@ -30,33 +31,95 @@ const About = ({ language }: AboutProps) => {
   return (
     <section className="py-20 px-4 bg-gradient-elegant">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="animate-slide-in-left">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              {content[language].title}
-            </h2>
-            <p className="text-xl text-accent font-semibold mb-6">
-              {content[language].subtitle}
+        {/* Header */}
+        <div className="text-center md:text-left mb-8">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            {content[language].title}
+          </h2>
+          <p className="text-xl text-accent font-semibold">
+            {content[language].subtitle}
+          </p>
+        </div>
+
+        {/* Mobile Layout - Stacked */}
+        <div className="md:hidden space-y-6">
+          <p className="text-muted-foreground leading-loose">
+            {content[language].description[0]}
+          </p>
+          
+          <Card className="overflow-hidden shadow-luxury">
+            <div className="aspect-[4/3]">
+              <img
+                src={livingRoomImage}
+                alt="Kalypso Osijek living room"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Card>
+
+          <div>
+            <p className="text-muted-foreground mb-4 leading-loose">
+              {content[language].description[1]}
             </p>
-            {content[language].description.map((paragraph, index) => (
-              <p key={index} className="text-muted-foreground mb-4 leading-loose">
-                {paragraph}
-              </p>
-            ))}
+            <p className="text-muted-foreground leading-loose">
+              {content[language].description[2]}
+            </p>
           </div>
 
-          {/* Image Card */}
-          <div className="animate-slide-in-right">
-            <Card className="overflow-hidden shadow-luxury hover:shadow-glow transition-all duration-300">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src={aboutImage}
-                  alt="Kalypso Osijek luxury apartment interior"
-                  className="w-full h-full object-cover filter brightness-95 saturate-90 sepia-[0.1]"
-                />
-              </div>
-            </Card>
+          <Card className="overflow-hidden shadow-luxury">
+            <div className="aspect-[4/3]">
+              <img
+                src={romanticSetupImage}
+                alt="Kalypso Osijek romantic setup"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Card>
+        </div>
+
+        {/* Tablet/Desktop Layout - Side by Side */}
+        <div className="hidden md:block space-y-12">
+          {/* First Row: Text Left, Image Right */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="animate-slide-in-left">
+              <p className="text-muted-foreground leading-loose">
+                {content[language].description[0]}
+              </p>
+            </div>
+            <div className="animate-slide-in-right">
+              <Card className="overflow-hidden shadow-luxury hover:shadow-glow transition-all duration-300">
+                <div className="aspect-[4/3]">
+                  <img
+                    src={livingRoomImage}
+                    alt="Kalypso Osijek living room"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          {/* Second Row: Image Left, Text Right */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="animate-slide-in-left">
+              <Card className="overflow-hidden shadow-luxury hover:shadow-glow transition-all duration-300">
+                <div className="aspect-[4/3]">
+                  <img
+                    src={romanticSetupImage}
+                    alt="Kalypso Osijek romantic setup"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+            </div>
+            <div className="animate-slide-in-right">
+              <p className="text-muted-foreground mb-4 leading-loose">
+                {content[language].description[1]}
+              </p>
+              <p className="text-muted-foreground leading-loose">
+                {content[language].description[2]}
+              </p>
+            </div>
           </div>
         </div>
       </div>

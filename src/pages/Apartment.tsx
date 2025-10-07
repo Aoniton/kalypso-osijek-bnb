@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BookNowButton from "@/components/BookNowButton";
 import { Card, CardContent } from "@/components/ui/card";
 import livingArea from "@/assets/living-area.jpg";
 import bedroom from "@/assets/bedroom.jpg";
@@ -13,15 +12,16 @@ const Apartment = () => {
   const content = {
     en: {
       title: "The Apartment",
-      subtitle: "Modern Luxury in Every Detail",
-      description: (
+      subtitle: (
         <>
-          In the very heart of Osijek lies Kalypso — a place where the everyday stays at the door, and a rare sense of calm welcomes you inside.<br /><br />
-          Every detail, from the warm lighting to the carefully chosen interior touches, has been designed to create a space that feels soothing, intimate, and comfortable — like coming home, only more refined.<br /><br />
-          It's more than a place to stay — It’s where you slow down, reconnect, and savor moments that linger. Whether you’re looking for a romantic escape for two or a quiet weekend for yourself, Kalypso offers a space where every second carries meaning.
+          Modern Luxury in <br className="md:hidden" />Every Detail
         </>
       ),
-      
+      descriptionParts: [
+        "In the very heart of Osijek lies Kalypso — a place where the everyday stays at the door, and a rare sense of calm welcomes you inside.",
+        "Every detail, from the warm lighting to the carefully chosen interior touches, has been designed to create a space that feels soothing, intimate, and comfortable — like coming home, only more refined.",
+        "It's more than a place to stay — It's where you slow down, reconnect, and savor moments that linger. Whether you're looking for a romantic escape for two or a quiet weekend for yourself, Kalypso offers a space where every second carries meaning.",
+      ],
       features: [
         "Spacious open-plan living area with premium furnishings",
         "King-size bedroom with luxury bedding",
@@ -33,15 +33,16 @@ const Apartment = () => {
     },
     hr: {
       title: "Apartman",
-      subtitle: "Moderan Luksuz u Svakom Detalju",
-      description: (
+      subtitle: (
         <>
-          U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra.<br /><br />
-          Svaki detalj, od toplog svjetla do pažljivo odabranih elemenata interijera, zamišljen je kako bi prostor djelovao smirujuće, toplo i ugodno — kao da ste došli kući, ali u luksuznijoj verziji.<br /><br />
-          Ovdje ne dolazite samo prespavati. Ovdje dolazite usporiti, ponovno se povezati i uživati u trenucima koji ostaju u sjećanju. Bilo da ste u potrazi za romantičnim bijegom u dvoje ili mirnim vikendom za sebe, Kalypso nudi prostor u kojem svaki trenutak ima svoju težinu i značenje.
+          Moderan Luksuz u <br className="md:hidden" />Svakom Detalju
         </>
       ),
-      
+      descriptionParts: [
+        "U samom srcu Osijeka nalazi se Kalypso apartman — mjesto gdje svakodnevica prestaje čim zakoračite unutra.",
+        "Svaki detalj, od toplog svjetla do pažljivo odabranih elemenata interijera, zamišljen je kako bi prostor djelovao smirujuće, toplo i ugodno — kao da ste došli kući, ali u luksuznijoj verziji.",
+        "Ovdje ne dolazite samo prespavati. Ovdje dolazite usporiti, ponovno se povezati i uživati u trenucima koji ostaju u sjećanju. Bilo da ste u potrazi za romantičnim bijegom u dvoje ili mirnim vikendom za sebe, Kalypso nudi prostor u kojem svaki trenutak ima svoju težinu i značenje.",
+      ],
       features: [
         "Prostrani dnevni boravak otvorenog tipa s premium namještajem",
         "Spavaća soba king size s luksuznom posteljinom",
@@ -68,11 +69,72 @@ const Apartment = () => {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Mobile/Tablet Layout */}
+            <div className="lg:hidden space-y-6 animate-fade-in">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
+                {content[language].descriptionParts[0]}
+              </p>
+              
+              <Card className="overflow-hidden shadow-luxury">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={livingArea} 
+                    alt="Kalypso Osijek luxury living area" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
+                {content[language].descriptionParts[1]}
+              </p>
+
+              <Card className="overflow-hidden shadow-luxury">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={bedroom} 
+                    alt="Kalypso Osijek luxury bedroom" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
+                {content[language].descriptionParts[2]}
+              </p>
+
+              <Card className="overflow-hidden shadow-luxury">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={livingRoom} 
+                    alt="Kalypso Osijek living room" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+
+              <Card className="shadow-luxury">
+                <CardContent className="p-6">
+                  <ul className="space-y-3">
+                    {content[language].features.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-accent mr-3 mt-1">✓</span>
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6 animate-slide-in-left">
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide px-4 md:px-0 font-light">
-                  {content[language].description}
-                </p>
+                {content[language].descriptionParts.map((part, index) => (
+                  <p key={index} className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
+                    {part}
+                  </p>
+                ))}
                 
                 <Card className="shadow-luxury">
                   <CardContent className="p-6">
@@ -123,7 +185,6 @@ const Apartment = () => {
           </div>
         </section>
       </main>
-      <BookNowButton language={language} />
       <Footer language={language} />
     </div>
   );
