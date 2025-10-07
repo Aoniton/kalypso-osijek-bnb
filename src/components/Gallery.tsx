@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import luxuryBedroom from "@/assets/luxury-bedroom.jpg";
 import romanticSetup from "@/assets/romantic-setup.jpg";
 import jacuzziInterior from "@/assets/jacuzzi-interior.jpg";
@@ -51,44 +53,75 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
   };
 
   const allImages = [
-    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", usedInText: true },
-    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", usedInText: true },
-    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", usedInText: false },
-    { src: livingRoom, alt: "Kalypso Osijek modern living room", usedInText: true },
-    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", usedInText: false },
     { src: jacuzziPurpleLights, alt: "Kalypso Osijek jacuzzi with purple ambient lights", usedInText: true },
+    { src: girlsinbed, alt: "Kalypso Osijek comfortable bedroom experience", usedInText: false },
+    { src: romanticSetup, alt: "Kalypso Osijek romantic setup", usedInText: true },
+    { src: livingRoom, alt: "Kalypso Osijek modern living room", usedInText: true },
+    { src: jacuzzi, alt: "Kalypso Osijek luxury jacuzzi", usedInText: false },
+    { src: luxuryBedroom, alt: "Kalypso Osijek luxury bedroom", usedInText: true },
     { src: heroKalypso, alt: "Kalypso Osijek luxury wellness apartment exterior", usedInText: false },
+    { src: girlsdrink, alt: "Kalypso Osijek relaxing with drinks", usedInText: false },
     { src: bedroom, alt: "Kalypso Osijek comfortable bedroom", usedInText: true },
-    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", usedInText: false },
+    { src: jacuzziInterior, alt: "Kalypso Osijek wellness jacuzzi interior", usedInText: false },
+    { src: bedroom2, alt: "Kalypso Osijek elegant bedroom", usedInText: false },
+    { src: kitchen, alt: "Kalypso Osijek modern kitchen", usedInText: false },
     { src: livingArea, alt: "Kalypso Osijek spacious living area", usedInText: true },
+    { src: pinkroom, alt: "Kalypso Osijek pink themed room", usedInText: false },
     { src: saunaPhoto, alt: "Kalypso Osijek relaxing sauna experience", usedInText: true },
-    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities", usedInText: false },
+    { src: lounge, alt: "Kalypso Osijek lounge area", usedInText: false },
+    { src: view, alt: "Kalypso Osijek scenic view", usedInText: false },
+    { src: finnishSauna, alt: "Kalypso Osijek Finnish sauna", usedInText: false },
+    { src: girls, alt: "Kalypso Osijek guests enjoying the apartment", usedInText: false },
     { src: aboutKalypso, alt: "Kalypso Osijek luxury wellness apartment", usedInText: false },
     { src: balcony, alt: "Kalypso Osijek balcony view", usedInText: false },
-    { src: bedroom1, alt: "Kalypso Osijek bedroom interior", usedInText: false },
-    { src: bedroom2, alt: "Kalypso Osijek elegant bedroom", usedInText: false },
-    { src: dinning, alt: "Kalypso Osijek dining area", usedInText: false },
-    { src: entrance, alt: "Kalypso Osijek apartment entrance", usedInText: false },
-    { src: girls, alt: "Kalypso Osijek guests enjoying the apartment", usedInText: false },
-    { src: girlsdrink, alt: "Kalypso Osijek relaxing with drinks", usedInText: false },
-    { src: girlsinbed, alt: "Kalypso Osijek comfortable bedroom experience", usedInText: false },
     { src: girlwithbook, alt: "Kalypso Osijek relaxing reading area", usedInText: false },
-    { src: jacuzzi, alt: "Kalypso Osijek luxury jacuzzi", usedInText: false },
+    { src: dinning, alt: "Kalypso Osijek dining area", usedInText: false },
     { src: jacuzzi1, alt: "Kalypso Osijek jacuzzi wellness area", usedInText: false },
-    { src: kitchen, alt: "Kalypso Osijek modern kitchen", usedInText: false },
-    { src: kitchen1, alt: "Kalypso Osijek kitchen interior", usedInText: false },
-    { src: kitchen2, alt: "Kalypso Osijek fully equipped kitchen", usedInText: false },
-    { src: lounge, alt: "Kalypso Osijek lounge area", usedInText: false },
-    { src: pinkroom, alt: "Kalypso Osijek pink themed room", usedInText: false },
-    { src: sauna, alt: "Kalypso Osijek sauna interior", usedInText: false },
-    { src: shower, alt: "Kalypso Osijek modern shower", usedInText: false },
-    { src: view, alt: "Kalypso Osijek scenic view", usedInText: false },
     { src: womanSauna, alt: "Kalypso Osijek sauna relaxation", usedInText: false },
+    { src: bedroom1, alt: "Kalypso Osijek bedroom interior", usedInText: false },
+    { src: kitchen1, alt: "Kalypso Osijek kitchen interior", usedInText: false },
+    { src: sauna, alt: "Kalypso Osijek sauna interior", usedInText: false },
+    { src: ledLighting, alt: "Kalypso Osijek LED ambient lighting", usedInText: false },
+    { src: shower, alt: "Kalypso Osijek modern shower", usedInText: false },
+    { src: kitchen2, alt: "Kalypso Osijek fully equipped kitchen", usedInText: false },
+    { src: entrance, alt: "Kalypso Osijek apartment entrance", usedInText: false },
+    { src: bathroomAmenities, alt: "Kalypso Osijek premium bathroom amenities", usedInText: false },
   ];
 
   const images = excludeTextBlockImages 
     ? allImages.filter(img => !img.usedInText)
     : allImages;
+
+  const [visibleCount, setVisibleCount] = useState(9); // Default to desktop
+  const [initialLoad, setInitialLoad] = useState(true);
+
+  useEffect(() => {
+    if (initialLoad) {
+      const updateInitialCount = () => {
+        if (window.innerWidth < 768) {
+          setVisibleCount(6); // Mobile: 1 col * 6 rows
+        } else if (window.innerWidth < 1024) {
+          setVisibleCount(8); // Tablet: 2 cols * 4 rows
+        } else {
+          setVisibleCount(9); // Desktop: 3 cols * 3 rows
+        }
+      };
+      updateInitialCount();
+      setInitialLoad(false);
+    }
+  }, [initialLoad]);
+
+  const displayedImages = images.slice(0, visibleCount);
+  const hasMore = visibleCount < images.length;
+
+  const loadMore = () => {
+    setVisibleCount(prev => prev + 9); // Load 3 more rows on desktop
+  };
+
+  const loadMoreContent = {
+    en: "Load More",
+    hr: "Učitaj Više",
+  };
 
   return (
     <section className="py-20 px-4 bg-background">
@@ -103,7 +136,7 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((image, index) => (
+          {displayedImages.map((image, index) => (
             <Card
               key={index}
               className="overflow-hidden hover:shadow-luxury transition-all duration-300 hover:scale-[1.02] cursor-pointer animate-scale-in group p-0 border-0"
@@ -120,6 +153,18 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
             </Card>
           ))}
         </div>
+
+        {hasMore && (
+          <div className="flex justify-center mt-12">
+            <Button
+              onClick={loadMore}
+              size="lg"
+              className="animate-fade-in"
+            >
+              {loadMoreContent[language]}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
