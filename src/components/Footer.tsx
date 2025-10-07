@@ -60,11 +60,11 @@ const Footer = ({ language }: FooterProps) => {
                     Osijek
                   </h3>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-start">
                   <span className="text-xs font-medium text-secondary-foreground">Wellness Apartment</span>
                   <div className="flex gap-0.5 mt-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-2.5 h-2.5 fill-current text-accent" />
+                      <Star key={i} className="w-2.5 h-2.5 fill-current text-yellow-400" />
                     ))}
                   </div>
                 </div>
