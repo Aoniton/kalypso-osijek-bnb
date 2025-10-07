@@ -30,7 +30,6 @@ const Apartment = () => {
         <>Modern bathroom with a <strong>rainfall shower</strong></>,
         <>Fully equipped kitchenette for a carefree stay</>,
         <>Air conditioning for year-round comfort</>,
-        <><strong>Blackout curtains</strong> for the perfect night's rest</>,
       ],
     },
     hr: {
@@ -53,7 +52,6 @@ const Apartment = () => {
         <>Moderna kupaonica s <strong>kišnim tušem</strong></>,
         <>Potpuno opremljena kuhinjica za bezbrižan boravak</>,
         <>Klima uređaj za udobnost u svako doba godine</>,
-        <><strong>Zamračujuće zavjese</strong> za savršen san</>,
       ],
     },
   };
@@ -142,7 +140,7 @@ const Apartment = () => {
                 
                 <Card className="shadow-luxury">
                   <CardContent className="p-6">
-                    <ul className="space-y-3">
+                    <ul className="grid grid-cols-2 gap-x-8 gap-y-3">
                       {content[language].features.map((feature, index) => (
                         <li key={index} className="flex items-start">
                           <span className="text-accent mr-3 mt-1">✓</span>
