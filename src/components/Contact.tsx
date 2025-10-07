@@ -40,7 +40,7 @@ const Contact = ({ language }: ContactProps) => {
     },
     hr: {
       title: "Kontaktirajte Nas",
-      subtitle: "Javite Se - Tu Smo Da Pomognemo",
+      subtitle: "Tu Smo Da Pomognemo",
       form: {
         name: "Vaše Ime",
         email: "Email Adresa",
