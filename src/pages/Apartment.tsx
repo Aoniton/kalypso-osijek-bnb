@@ -130,59 +130,61 @@ const Apartment = () => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
-              <div className="space-y-6 animate-slide-in-left">
-                {content[language].descriptionParts.map((part, index) => (
-                  <p key={index} className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
-                    {part}
-                  </p>
-                ))}
-                
-                <Card className="shadow-luxury">
-                  <CardContent className="p-6">
-                    <ul className="grid grid-cols-2 gap-x-8 gap-y-3">
-                      {content[language].features.map((feature, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-accent mr-3 mt-1">✓</span>
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
+            <div className="hidden lg:block space-y-12 animate-fade-in">
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="space-y-6 animate-slide-in-left">
+                  {content[language].descriptionParts.map((part, index) => (
+                    <p key={index} className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
+                      {part}
+                    </p>
+                  ))}
+                </div>
 
-              <div className="grid gap-4 animate-slide-in-right">
-                <Card className="overflow-hidden shadow-luxury">
-                  <div className="aspect-video overflow-hidden">
-                    <img 
-                      src={livingArea} 
-                      alt="Kalypso Osijek luxury living area" 
-                      className="w-full h-full object-cover"
-                    />
+                <div className="grid gap-4 animate-slide-in-right">
+                  <Card className="overflow-hidden shadow-luxury">
+                    <div className="aspect-video overflow-hidden">
+                      <img 
+                        src={livingArea} 
+                        alt="Kalypso Osijek luxury living area" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </Card>
+                  <div className="grid grid-cols-2 gap-4">
+                    <Card className="overflow-hidden shadow-luxury">
+                      <div className="aspect-square overflow-hidden">
+                        <img 
+                          src={bedroom} 
+                          alt="Kalypso Osijek luxury bedroom" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </Card>
+                    <Card className="overflow-hidden shadow-luxury">
+                      <div className="aspect-square overflow-hidden">
+                        <img 
+                          src={livingRoom} 
+                          alt="Kalypso Osijek living room" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </Card>
                   </div>
-                </Card>
-                <div className="grid grid-cols-2 gap-4">
-                  <Card className="overflow-hidden shadow-luxury">
-                    <div className="aspect-square overflow-hidden">
-                      <img 
-                        src={bedroom} 
-                        alt="Kalypso Osijek luxury bedroom" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </Card>
-                  <Card className="overflow-hidden shadow-luxury">
-                    <div className="aspect-square overflow-hidden">
-                      <img 
-                        src={livingRoom} 
-                        alt="Kalypso Osijek living room" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </Card>
                 </div>
               </div>
+
+              <Card className="shadow-luxury">
+                <CardContent className="p-6">
+                  <ul className="grid grid-cols-2 gap-x-8 gap-y-3">
+                    {content[language].features.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-accent mr-3 mt-1">✓</span>
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
