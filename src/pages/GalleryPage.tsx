@@ -10,7 +10,7 @@ const GalleryPage = () => {
     <div className="min-h-screen">
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
-        <Gallery language={language} />
+        <Gallery language={language} showLoadMore={false} />
       </main>
       <Footer language={language} />
     </div>

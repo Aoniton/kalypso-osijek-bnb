@@ -38,9 +38,10 @@ import womanSauna from "@/assets/woman-sauna.jpg";
 interface GalleryProps {
   language: "en" | "hr";
   excludeTextBlockImages?: boolean;
+  showLoadMore?: boolean;
 }
 
-const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => {
+const Gallery = ({ language, excludeTextBlockImages = false, showLoadMore = true }: GalleryProps) => {
   const content = {
     en: {
       title: "Gallery",
@@ -97,19 +98,23 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
 
   useEffect(() => {
     if (initialLoad) {
-      const updateInitialCount = () => {
-        if (window.innerWidth < 768) {
-          setVisibleCount(6); // Mobile: 1 col * 6 rows
-        } else if (window.innerWidth < 1024) {
-          setVisibleCount(8); // Tablet: 2 cols * 4 rows
-        } else {
-          setVisibleCount(9); // Desktop: 3 cols * 3 rows
-        }
-      };
-      updateInitialCount();
+      if (!showLoadMore) {
+        setVisibleCount(images.length); // Show all images if Load More is disabled
+      } else {
+        const updateInitialCount = () => {
+          if (window.innerWidth < 768) {
+            setVisibleCount(6); // Mobile: 1 col * 6 rows
+          } else if (window.innerWidth < 1024) {
+            setVisibleCount(8); // Tablet: 2 cols * 4 rows
+          } else {
+            setVisibleCount(9); // Desktop: 3 cols * 3 rows
+          }
+        };
+        updateInitialCount();
+      }
       setInitialLoad(false);
     }
-  }, [initialLoad]);
+  }, [initialLoad, showLoadMore, images.length]);
 
   const displayedImages = images.slice(0, visibleCount);
   const hasMore = visibleCount < images.length;
@@ -154,7 +159,7 @@ const Gallery = ({ language, excludeTextBlockImages = false }: GalleryProps) => 
           ))}
         </div>
 
-        {hasMore && (
+        {showLoadMore && hasMore && (
           <div className="flex justify-center mt-12">
             <Button
               onClick={loadMore}
