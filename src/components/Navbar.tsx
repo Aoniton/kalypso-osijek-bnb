@@ -25,7 +25,6 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
 
   const navItems = {
     en: [
-      { label: "Home", path: "/" },
       { label: "Apartment", path: "/apartment" },
       { label: "Wellness", path: "/wellness" },
       { label: "Gallery", path: "/gallery" },
@@ -34,7 +33,6 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "About Us", path: "/about" },
     ],
     hr: [
-      { label: "Početna", path: "/" },
       { label: "Apartman", path: "/apartment" },
       { label: "Wellness", path: "/wellness" },
       { label: "Galerija", path: "/gallery" },
@@ -63,16 +61,35 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               className={`h-12 w-auto transition-all ${!isHomePage || isScrolled ? "brightness-100" : "brightness-0 invert"}`}
             />
             <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className={`text-lg font-heading font-bold transition-colors ${
-                  !isHomePage || isScrolled ? "text-primary" : "text-primary-foreground"
-                }`}>Kalypso Osijek</span>
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`w-3 h-3 fill-current ${
+              <div className="flex items-center gap-2">
+                <div className="flex flex-col">
+                  <span className={`text-lg font-heading font-bold transition-colors leading-tight ${
+                    !isHomePage || isScrolled ? "text-primary" : "text-primary-foreground"
+                  }`}>Kalypso</span>
+                  <span className={`text-lg font-heading font-bold transition-colors leading-tight ${
+                    !isHomePage || isScrolled ? "text-primary" : "text-primary"
+                  }`}>Osijek</span>
+                </div>
+                <div className="flex flex-col items-center gap-0.5">
+                  <div className="flex gap-0.5">
+                    <Star className={`w-2.5 h-2.5 fill-current ${
                       !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
                     }`} />
-                  ))}
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                  </div>
+                  <div className="flex gap-0.5">
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                    <Star className={`w-2.5 h-2.5 fill-current ${
+                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                    }`} />
+                  </div>
+                  <Star className={`w-2.5 h-2.5 fill-current ${
+                    !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
+                  }`} />
                 </div>
               </div>
               <span className={`text-xs font-medium transition-colors ${

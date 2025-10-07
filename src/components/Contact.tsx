@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface ContactProps {
@@ -204,7 +204,28 @@ const Contact = ({ language }: ContactProps) => {
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-accent transition-colors"
                     >
-                      Kalypso Osijek
+                      Facebook
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-soft transition-all duration-300 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-soft">
+                    <Instagram className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">{content[language].info.social}</h3>
+                    <a 
+                      href="https://www.instagram.com/wellness_apartment_kalypso/?hl=en"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      Instagram
                     </a>
                   </div>
                 </div>

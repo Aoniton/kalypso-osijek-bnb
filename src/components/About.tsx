@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import livingRoomImage from "@/assets/living-room.jpg";
 import romanticSetupImage from "@/assets/romantic-setup.jpg";
+import luxuryBedroomImage from "@/assets/luxury-bedroom.jpg";
 
 interface AboutProps {
   language: "en" | "hr";
@@ -57,20 +58,29 @@ const About = ({ language }: AboutProps) => {
             </div>
           </Card>
 
-          <div>
-            <p className="text-muted-foreground mb-4 leading-loose">
-              {content[language].description[1]}
-            </p>
-            <p className="text-muted-foreground leading-loose">
-              {content[language].description[2]}
-            </p>
-          </div>
+          <p className="text-muted-foreground leading-loose">
+            {content[language].description[1]}
+          </p>
 
           <Card className="overflow-hidden shadow-luxury">
             <div className="aspect-[4/3]">
               <img
                 src={romanticSetupImage}
                 alt="Kalypso Osijek romantic setup"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Card>
+
+          <p className="text-muted-foreground leading-loose">
+            {content[language].description[2]}
+          </p>
+
+          <Card className="overflow-hidden shadow-luxury">
+            <div className="aspect-[4/3]">
+              <img
+                src={luxuryBedroomImage}
+                alt="Kalypso Osijek luxury bedroom"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -113,12 +123,29 @@ const About = ({ language }: AboutProps) => {
               </Card>
             </div>
             <div className="animate-slide-in-right">
-              <p className="text-muted-foreground mb-4 leading-loose">
+              <p className="text-muted-foreground leading-loose">
                 {content[language].description[1]}
               </p>
+            </div>
+          </div>
+
+          {/* Third Row: Text Left, Image Right */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="animate-slide-in-left">
               <p className="text-muted-foreground leading-loose">
                 {content[language].description[2]}
               </p>
+            </div>
+            <div className="animate-slide-in-right">
+              <Card className="overflow-hidden shadow-luxury hover:shadow-glow transition-all duration-300">
+                <div className="aspect-[4/3]">
+                  <img
+                    src={luxuryBedroomImage}
+                    alt="Kalypso Osijek luxury bedroom"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
             </div>
           </div>
         </div>

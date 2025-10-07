@@ -9,7 +9,6 @@ interface FooterProps {
 const Footer = ({ language }: FooterProps) => {
   const navItems = {
     en: [
-      { label: "Home", path: "/" },
       { label: "Apartment", path: "/apartment" },
       { label: "Wellness", path: "/wellness" },
       { label: "Gallery", path: "/gallery" },
@@ -18,7 +17,6 @@ const Footer = ({ language }: FooterProps) => {
       { label: "About Us", path: "/about" },
     ],
     hr: [
-      { label: "Početna", path: "/" },
       { label: "Apartman", path: "/apartment" },
       { label: "Wellness", path: "/wellness" },
       { label: "Galerija", path: "/gallery" },
@@ -52,14 +50,25 @@ const Footer = ({ language }: FooterProps) => {
                 className="h-12 w-auto brightness-0 invert"
               />
               <div className="flex flex-col">
-                <div className="flex items-center gap-1.5">
-                  <h3 className="text-lg font-heading font-bold text-primary">
-                    Kalypso Osijek
-                  </h3>
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 fill-current text-accent" />
-                    ))}
+                <div className="flex items-center gap-2">
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-heading font-bold text-primary leading-tight">
+                      Kalypso
+                    </h3>
+                    <h3 className="text-lg font-heading font-bold text-primary leading-tight">
+                      Osijek
+                    </h3>
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5">
+                    <div className="flex gap-0.5">
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                    </div>
+                    <div className="flex gap-0.5">
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
+                    </div>
+                    <Star className="w-2.5 h-2.5 fill-current text-accent" />
                   </div>
                 </div>
                 <span className="text-xs font-medium text-secondary-foreground">Wellness Apartment</span>
