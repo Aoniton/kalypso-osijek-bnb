@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BookNowButton from "@/components/BookNowButton";
 import { Card, CardContent } from "@/components/ui/card";
 import livingArea from "@/assets/living-area.jpg";
 import bedroom from "@/assets/bedroom.jpg";
@@ -64,13 +63,18 @@ const Apartment = () => {
                 {content[language].title}
               </h1>
               <p className="text-xl text-accent font-semibold">
-                {content[language].subtitle}
+                {language === "en" ? (
+                  <>Modern Luxury in <br className="md:hidden" />Every Detail</>
+                ) : (
+                  <>Moderan Luksuz u <br className="md:hidden" />Svakom Detalju</>
+                )}
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Desktop Layout: 2-column */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6 animate-slide-in-left">
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide px-4 md:px-0 font-light">
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
                   {content[language].description}
                 </p>
                 
@@ -79,7 +83,6 @@ const Apartment = () => {
                     <ul className="space-y-3">
                       {content[language].features.map((feature, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="text-accent mr-3 mt-1">✓</span>
                           <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
@@ -120,10 +123,78 @@ const Apartment = () => {
                 </div>
               </div>
             </div>
+
+            {/* Mobile/Tablet Layout: Interspersed text and images */}
+            <div className="lg:hidden space-y-8 animate-fade-in">
+              <Card className="shadow-luxury">
+                <CardContent className="p-6">
+                  <ul className="space-y-3">
+                    {content[language].features.slice(0, 3).map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden shadow-luxury">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={livingArea} 
+                    alt="Kalypso Osijek luxury living area" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+
+              <Card className="shadow-luxury">
+                <CardContent className="p-6">
+                  <ul className="space-y-3">
+                    {content[language].features.slice(3, 5).map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden shadow-luxury">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={bedroom} 
+                    alt="Kalypso Osijek luxury bedroom" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+
+              <Card className="shadow-luxury">
+                <CardContent className="p-6">
+                  <ul className="space-y-3">
+                    {content[language].features.slice(5).map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden shadow-luxury">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={livingRoom} 
+                    alt="Kalypso Osijek living room" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+            </div>
           </div>
         </section>
       </main>
-      <BookNowButton language={language} />
       <Footer language={language} />
     </div>
   );

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Facebook } from "lucide-react";
+import { Facebook, Instagram, Star } from "lucide-react";
+import logo from "@/assets/zvone-logo.png";
 
 interface FooterProps {
   language: "en" | "hr";
@@ -14,6 +15,7 @@ const Footer = ({ language }: FooterProps) => {
       { label: "Gallery", path: "/gallery" },
       { label: "Location", path: "/location" },
       { label: "Contact", path: "/contact" },
+      { label: "About Us", path: "/about" },
     ],
     hr: [
       { label: "Početna", path: "/" },
@@ -22,6 +24,7 @@ const Footer = ({ language }: FooterProps) => {
       { label: "Galerija", path: "/gallery" },
       { label: "Lokacija", path: "/location" },
       { label: "Kontakt", path: "/contact" },
+      { label: "O nama", path: "/about" },
     ],
   };
 
@@ -42,9 +45,19 @@ const Footer = ({ language }: FooterProps) => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-heading font-bold mb-2">
-              <span className="text-primary">KALYPSO</span> Osijek
-            </h3>
+            <div className="flex items-center gap-3 mb-2">
+              <img src={logo} alt="Kalypso Logo" className="h-12 w-12 object-contain" />
+              <div className="flex flex-col">
+                <h3 className="text-lg font-heading font-bold text-foreground">
+                  Kalypso Osijek Wellness Apartment
+                </h3>
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-primary text-primary" />
+                  ))}
+                </div>
+              </div>
+            </div>
             <p className="text-secondary-foreground/80">
               {content[language].tagline}
             </p>
@@ -90,6 +103,17 @@ const Footer = ({ language }: FooterProps) => {
                 >
                   <Facebook className="w-4 h-4 mr-2 group-hover:text-primary" />
                   Facebook
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.instagram.com/wellness_apartment_kalypso/?hl=en"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center hover:text-primary transition-colors group"
+                >
+                  <Instagram className="w-4 h-4 mr-2 group-hover:text-primary" />
+                  Instagram
                 </a>
               </li>
             </ul>

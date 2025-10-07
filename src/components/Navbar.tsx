@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Star } from "lucide-react";
+import logo from "@/assets/zvone-logo.png";
 
 interface NavbarProps {
   language: "en" | "hr";
@@ -30,6 +31,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "Gallery", path: "/gallery" },
       { label: "Location", path: "/location" },
       { label: "Contact", path: "/contact" },
+      { label: "About Us", path: "/about" },
     ],
     hr: [
       { label: "Početna", path: "/" },
@@ -38,6 +40,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       { label: "Galerija", path: "/gallery" },
       { label: "Lokacija", path: "/location" },
       { label: "Kontakt", path: "/contact" },
+      { label: "O nama", path: "/about" },
     ],
   };
 
@@ -53,10 +56,20 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className={`text-2xl font-heading font-bold transition-colors ${
+          <Link to="/" className={`flex items-center gap-2 transition-colors ${
             !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
           }`}>
-            <span className="text-primary">KALYPSO</span> <span className={!isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"}>Osijek</span>
+            <img src={logo} alt="Kalypso Logo" className="h-10 w-10 object-contain" />
+            <div className="flex flex-col">
+              <span className={`text-sm md:text-base font-heading font-bold ${!isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+                Kalypso Osijek Wellness Apartment
+              </span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 fill-primary text-primary" />
+                ))}
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
