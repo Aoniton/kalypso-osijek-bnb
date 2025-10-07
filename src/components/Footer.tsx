@@ -53,27 +53,21 @@ const Footer = ({ language }: FooterProps) => {
               />
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <div className="flex flex-col">
-                    <h3 className="text-lg font-heading font-bold text-primary leading-tight">
-                      Kalypso
-                    </h3>
-                    <h3 className="text-lg font-heading font-bold text-primary leading-tight">
-                      Osijek
-                    </h3>
-                  </div>
-                  <div className="flex flex-col items-center gap-0.5">
-                    <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                    <div className="flex gap-0.5">
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                    </div>
-                    <div className="flex gap-0.5">
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                      <Star className="w-2.5 h-2.5 fill-current text-accent" />
-                    </div>
+                  <h3 className="text-lg font-heading font-bold text-primary leading-tight">
+                    Kalypso
+                  </h3>
+                  <h3 className="text-lg font-heading font-bold text-primary leading-tight">
+                    Osijek
+                  </h3>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-xs font-medium text-secondary-foreground">Wellness Apartment</span>
+                  <div className="flex gap-0.5 mt-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-2.5 h-2.5 fill-current text-accent" />
+                    ))}
                   </div>
                 </div>
-                <span className="text-xs font-medium text-secondary-foreground">Wellness Apartment</span>
               </div>
             </div>
             <p className="text-secondary-foreground/80">

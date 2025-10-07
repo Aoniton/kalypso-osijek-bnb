@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe, Star } from "lucide-react";
+import { Menu, X, Star } from "lucide-react";
 import logo from "@/assets/zvone-logo.png";
 
 interface NavbarProps {
@@ -64,39 +64,25 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
             />
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <div className="flex flex-col">
-                  <span className={`text-lg font-heading font-bold transition-colors leading-tight ${
-                    !isHomePage || isScrolled ? "text-primary" : "text-primary-foreground"
-                  }`}>Kalypso</span>
-                  <span className={`text-lg font-heading font-bold transition-colors leading-tight ${
-                    !isHomePage || isScrolled ? "text-primary" : "text-primary"
-                  }`}>Osijek</span>
-                </div>
-                <div className="flex flex-col items-center gap-0.5">
-                  <Star className={`w-2.5 h-2.5 fill-current ${
-                    !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                  }`} />
-                  <div className="flex gap-0.5">
-                    <Star className={`w-2.5 h-2.5 fill-current ${
+                <span className={`text-lg font-heading font-bold transition-colors leading-tight ${
+                  !isHomePage || isScrolled ? "text-primary" : "text-primary-foreground"
+                }`}>Kalypso</span>
+                <span className={`text-lg font-heading font-bold transition-colors leading-tight ${
+                  !isHomePage || isScrolled ? "text-primary" : "text-primary"
+                }`}>Osijek</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className={`text-xs font-medium transition-colors ${
+                  !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
+                }`}>Wellness Apartment</span>
+                <div className="flex gap-0.5 mt-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-2.5 h-2.5 fill-current ${
                       !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
                     }`} />
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                  </div>
-                  <div className="flex gap-0.5">
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                    <Star className={`w-2.5 h-2.5 fill-current ${
-                      !isHomePage || isScrolled ? "text-accent" : "text-primary-foreground"
-                    }`} />
-                  </div>
+                  ))}
                 </div>
               </div>
-              <span className={`text-xs font-medium transition-colors ${
-                !isHomePage || isScrolled ? "text-foreground" : "text-primary-foreground"
-              }`}>Wellness Apartment</span>
             </div>
           </Link>
 
@@ -121,7 +107,6 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
               className={`hover:bg-primary hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
             >
-              <Globe className="w-4 h-4 mr-2" />
               {language === "en" ? "HR" : "EN"}
             </Button>
           </div>
@@ -160,8 +145,7 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
                 }}
                 className={`hover:bg-primary hover:text-primary-foreground justify-start ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
               >
-                <Globe className="w-4 h-4 mr-2" />
-                {language === "en" ? "Hrvatski" : "English"}
+                {language === "en" ? "HR" : "EN"}
               </Button>
             </div>
           </div>
