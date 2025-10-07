@@ -19,7 +19,7 @@ const Index = () => {
         <Hero language={language} />
         <About language={language} />
         <Features language={language} />
-        <Gallery language={language} />
+        <Gallery language={language} excludeTextBlockImages={true} />
         <Location language={language} />
         <Contact language={language} />
       </main>
