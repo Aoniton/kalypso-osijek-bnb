@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 
 interface StructuredDataProps {
-  type: "home" | "apartment" | "wellness" | "location";
+  type: "home" | "apartment" | "wellness" | "location" | "privacy";
 }
 
 const StructuredData = ({ type }: StructuredDataProps) => {
@@ -148,6 +148,15 @@ const StructuredData = ({ type }: StructuredDataProps) => {
             "longitude": 18.6955
           },
           "hasMap": "https://maps.google.com/?q=Osijek,Croatia"
+        };
+      
+      case "privacy":
+        return {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Privacy Policy - Kalypso Luxury Wellness Apartment",
+          "description": "Privacy policy and data protection information for Kalypso Luxury Wellness Apartment Osijek.",
+          "url": `${baseUrl}/privacy-policy`
         };
       
       default:

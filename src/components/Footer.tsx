@@ -16,6 +16,7 @@ const Footer = ({ language }: FooterProps) => {
       { label: "Contact", path: "/contact" },
       { label: "FAQ", path: "/faq" },
       { label: "About Us", path: "/about" },
+      { label: "Privacy Policy", path: "/privacy-policy" },
     ],
     hr: [
       { label: "Apartman", path: "/apartment" },
@@ -25,6 +26,7 @@ const Footer = ({ language }: FooterProps) => {
       { label: "Kontakt", path: "/contact" },
       { label: "ČPP", path: "/faq" },
       { label: "O nama", path: "/about" },
+      { label: "Politika Privatnosti", path: "/privacy-policy" },
     ],
   };
 

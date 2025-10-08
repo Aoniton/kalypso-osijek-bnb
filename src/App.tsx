@@ -12,6 +12,7 @@ import LocationPage from "./pages/LocationPage";
 import ContactPage from "./pages/ContactPage";
 import AboutUs from "./pages/AboutUs";
 import FAQ from "./pages/FAQ";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import BackToTop from "./components/BackToTop";
 
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <BackToTop />
