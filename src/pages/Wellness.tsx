@@ -50,6 +50,8 @@ const Wellness = () => {
                   <img 
                     src={jacuzziPurpleLights} 
                     alt="Kalypso Osijek jacuzzi with purple LED lights" 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -64,6 +66,8 @@ const Wellness = () => {
                   <img 
                     src={saunaPhoto} 
                     alt="Kalypso Osijek Finnish sauna interior" 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -82,6 +86,8 @@ const Wellness = () => {
                     <img 
                       src={jacuzziPurpleLights} 
                       alt="Kalypso Osijek jacuzzi with purple LED lights" 
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -91,6 +97,8 @@ const Wellness = () => {
                     <img 
                       src={saunaPhoto} 
                       alt="Kalypso Osijek Finnish sauna interior" 
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </div>

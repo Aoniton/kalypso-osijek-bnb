@@ -52,6 +52,8 @@ const Reviews = ({ language }: ReviewsProps) => {
               <img
                 src={review}
                 alt={`Client review ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-contain"
               />
             </div>

@@ -53,6 +53,8 @@ const About = ({ language }: AboutProps) => {
               <img
                 src={livingRoomImage}
                 alt="Kalypso Osijek living room"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -67,6 +69,8 @@ const About = ({ language }: AboutProps) => {
               <img
                 src={romanticSetupImage}
                 alt="Kalypso Osijek romantic setup"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -81,6 +85,8 @@ const About = ({ language }: AboutProps) => {
               <img
                 src={luxuryBedroomImage}
                 alt="Kalypso Osijek luxury bedroom"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -102,6 +108,8 @@ const About = ({ language }: AboutProps) => {
                   <img
                     src={livingRoomImage}
                     alt="Kalypso Osijek living room"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -117,6 +125,8 @@ const About = ({ language }: AboutProps) => {
                   <img
                     src={romanticSetupImage}
                     alt="Kalypso Osijek romantic setup"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -142,6 +152,8 @@ const About = ({ language }: AboutProps) => {
                   <img
                     src={luxuryBedroomImage}
                     alt="Kalypso Osijek luxury bedroom"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -82,6 +82,8 @@ const Apartment = () => {
                   <img 
                     src={livingArea} 
                     alt="Kalypso Osijek luxury living area" 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -96,6 +98,8 @@ const Apartment = () => {
                   <img 
                     src={bedroom} 
                     alt="Kalypso Osijek luxury bedroom" 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -110,6 +114,8 @@ const Apartment = () => {
                   <img 
                     src={livingRoom} 
                     alt="Kalypso Osijek living room" 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -146,6 +152,8 @@ const Apartment = () => {
                       <img 
                         src={livingArea} 
                         alt="Kalypso Osijek luxury living area" 
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -156,6 +164,8 @@ const Apartment = () => {
                         <img 
                           src={bedroom} 
                           alt="Kalypso Osijek luxury bedroom" 
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -165,6 +175,8 @@ const Apartment = () => {
                         <img 
                           src={livingRoom} 
                           alt="Kalypso Osijek living room" 
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover"
                         />
                       </div>
