@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Star } from "lucide-react";
+import { Menu, X, Star, MoreHorizontal } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/zvone-logo.png";
 
 interface NavbarProps {
@@ -25,24 +31,31 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
 
   const navItems = {
     en: [
+      { label: "Home", path: "/" },
       { label: "Apartment", path: "/apartment" },
-      { label: "Wellness", path: "/wellness" },
       { label: "Gallery", path: "/gallery" },
       { label: "Location", path: "/location" },
       { label: "Contact", path: "/contact" },
+      { label: "Wellness", path: "/wellness" },
       { label: "FAQ", path: "/faq" },
       { label: "About Us", path: "/about" },
     ],
     hr: [
+      { label: "Početna", path: "/" },
       { label: "Apartman", path: "/apartment" },
-      { label: "Wellness", path: "/wellness" },
       { label: "Galerija", path: "/gallery" },
       { label: "Lokacija", path: "/location" },
       { label: "Kontakt", path: "/contact" },
+      { label: "Wellness", path: "/wellness" },
       { label: "ČPP", path: "/faq" },
       { label: "O nama", path: "/about" },
     ],
   };
+
+  // First 5 items for tablet view
+  const tabletItems = navItems[language].slice(0, 5);
+  // Remaining items for dropdown
+  const dropdownItems = navItems[language].slice(5);
 
   const isActive = (path: string) => location.pathname === path;
   const isHomePage = location.pathname === "/";
@@ -84,8 +97,8 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          {/* Desktop Navigation - Full menu on large screens */}
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems[language].map((item) => (
               <Link
                 key={item.path}
@@ -98,6 +111,58 @@ const Navbar = ({ language, onLanguageChange }: NavbarProps) => {
               </Link>
             ))}
             
+            {/* Language Switcher */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => onLanguageChange(language === "en" ? "hr" : "en")}
+              className={`hover:bg-primary hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+            >
+              {language === "en" ? "HR" : "EN"}
+            </Button>
+          </div>
+
+          {/* Tablet Navigation - First 5 items + dropdown for rest */}
+          <div className="hidden md:flex lg:hidden items-center space-x-4">
+            {tabletItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive(item.path) ? "text-primary" : (!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+            
+            {/* Dropdown for remaining items */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className={`hover:bg-primary hover:text-primary-foreground ${(!isHomePage || isScrolled) ? "text-foreground" : "text-primary-foreground"}`}
+                >
+                  <MoreHorizontal className="w-4 h-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background/95 backdrop-blur-md">
+                {dropdownItems.map((item) => (
+                  <DropdownMenuItem key={item.path} asChild>
+                    <Link
+                      to={item.path}
+                      className={`cursor-pointer ${
+                        isActive(item.path) ? "text-primary font-medium" : ""
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {/* Language Switcher */}
             <Button
               variant="ghost"
