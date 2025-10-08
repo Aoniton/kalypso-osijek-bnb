@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Features from "@/components/Features";
+import StructuredData from "@/components/StructuredData";
 import { Card } from "@/components/ui/card";
 import jacuzziPurpleLights from "@/assets/jacuzzi-purple-lights.jpg";
 import saunaPhoto from "@/assets/sauna-photo.jpg";
@@ -26,6 +27,7 @@ const Wellness = () => {
 
   return (
     <div className="min-h-screen">
+      <StructuredData type="wellness" />
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
         <section className="py-20 px-4 bg-background">

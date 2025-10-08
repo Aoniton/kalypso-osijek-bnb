@@ -7,6 +7,7 @@ import Location from "@/components/Location";
 import Contact from "@/components/Contact";
 import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 import { useLanguage } from "@/hooks/useLanguage";
 
 
@@ -15,6 +16,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <StructuredData type="home" />
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main>
         <Hero language={language} />

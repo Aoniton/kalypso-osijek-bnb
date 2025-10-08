@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
 import livingArea from "@/assets/living-area.jpg";
 import bedroom from "@/assets/bedroom.jpg";
@@ -58,6 +59,7 @@ const Apartment = () => {
 
   return (
     <div className="min-h-screen">
+      <StructuredData type="apartment" />
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
         <section className="py-20 px-4 bg-background">
