@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactProps {
   language: "en" | "hr";
@@ -12,6 +13,7 @@ interface ContactProps {
 
 const Contact = ({ language }: ContactProps) => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,7 +31,10 @@ const Contact = ({ language }: ContactProps) => {
         phone: "Phone Number",
         message: "Your Message",
         submit: "Send Message",
+        sending: "Sending...",
         success: "Message sent successfully! We'll get back to you soon.",
+        error: "Failed to send message. Please try again.",
+        rateLimit: "Too many requests. Please try again later.",
       },
       info: {
         phone: "Phone",
@@ -47,7 +52,10 @@ const Contact = ({ language }: ContactProps) => {
         phone: "Broj Telefona",
         message: "Vaša Poruka",
         submit: "Pošalji Poruku",
+        sending: "Slanje...",
         success: "Poruka uspješno poslana! Javit ćemo vam se uskoro.",
+        error: "Neuspješno slanje poruke. Pokušajte ponovno.",
+        rateLimit: "Previše zahtjeva. Pokušajte kasnije.",
       },
       info: {
         phone: "Telefon",
@@ -58,12 +66,51 @@ const Contact = ({ language }: ContactProps) => {
     },
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: content[language].form.success,
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          language,
+        },
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        
+        // Handle specific error codes
+        if (error.message?.includes("429")) {
+          toast({
+            title: content[language].form.rateLimit,
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: content[language].form.error,
+            variant: "destructive",
+          });
+        }
+      } else {
+        toast({
+          title: content[language].form.success,
+        });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: content[language].form.error,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -131,9 +178,10 @@ const Contact = ({ language }: ContactProps) => {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground font-semibold py-6 rounded-lg shadow-luxury transition-all duration-300 hover:scale-105"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-primary-foreground font-semibold py-6 rounded-lg shadow-luxury transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {content[language].form.submit}
+                  {isSubmitting ? content[language].form.sending : content[language].form.submit}
                 </Button>
               </form>
             </CardContent>
