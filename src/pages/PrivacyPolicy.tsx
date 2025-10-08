@@ -155,7 +155,7 @@ const PrivacyPolicy = () => {
       <div className="min-h-screen bg-background">
         <Navbar language={language} onLanguageChange={setLanguage} />
         
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-4xl">
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 max-w-4xl">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-3 sm:mb-4 text-foreground">
             {t.title}
           </h1>
