@@ -155,28 +155,28 @@ const PrivacyPolicy = () => {
       <div className="min-h-screen bg-background">
         <Navbar language={language} onLanguageChange={setLanguage} />
         
-        <main className="container mx-auto px-4 py-16 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 text-foreground">
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-3 sm:mb-4 text-foreground">
             {t.title}
           </h1>
-          <p className="text-sm text-muted-foreground mb-12">{t.lastUpdated}</p>
+          <p className="text-sm text-muted-foreground mb-8 sm:mb-12">{t.lastUpdated}</p>
 
           {/* Introduction */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.intro.title}
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               {t.intro.text}
             </p>
           </section>
 
           {/* Information Collection */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.collection.title}
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm sm:text-base">
               {t.collection.items.map((item, index) => (
                 <li key={index} className="leading-relaxed">{item}</li>
               ))}
@@ -184,11 +184,11 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Usage */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.usage.title}
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm sm:text-base">
               {t.usage.items.map((item, index) => (
                 <li key={index} className="leading-relaxed">{item}</li>
               ))}
@@ -196,80 +196,56 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Security */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.security.title}
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               {t.security.text}
             </p>
           </section>
 
           {/* Third Party */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.thirdParty.title}
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-4 text-sm sm:text-base">
               {t.thirdParty.text}
             </p>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-4">
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-4 text-sm sm:text-base">
               {t.thirdParty.items.map((item, index) => (
                 <li key={index} className="leading-relaxed">{item}</li>
               ))}
             </ul>
-            <p className="text-muted-foreground leading-relaxed italic">
+            <p className="text-muted-foreground leading-relaxed italic text-sm sm:text-base">
               {t.thirdParty.note}
             </p>
           </section>
 
           {/* Cookies */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.cookies.title}
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               {t.cookies.text}
             </p>
           </section>
 
           {/* Rights */}
-          <section className="mb-12">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
+          <section className="mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-heading font-semibold mb-3 sm:mb-4 text-foreground">
               {t.rights.title}
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-4 text-sm sm:text-base">
               {t.rights.intro}
             </p>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+            <ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm sm:text-base">
               {t.rights.items.map((item, index) => (
                 <li key={index} className="leading-relaxed">{item}</li>
               ))}
             </ul>
-          </section>
-
-          {/* Contact */}
-          <section className="mb-12 bg-secondary/50 p-6 rounded-lg">
-            <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
-              {t.contact.title}
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              {t.contact.text}
-            </p>
-            <div className="space-y-2">
-              <p className="text-foreground">
-                <span className="font-semibold">{language === "en" ? "Phone" : "Telefon"}:</span>{" "}
-                <a href="tel:+385914446571" className="text-primary hover:underline">
-                  {t.contact.phone}
-                </a>
-              </p>
-              <p className="text-foreground">
-                <span className="font-semibold">Email:</span>{" "}
-                <a href="mailto:zvone098@net.hr" className="text-primary hover:underline">
-                  {t.contact.email}
-                </a>
-              </p>
-            </div>
           </section>
         </main>
 
