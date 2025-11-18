@@ -24,23 +24,19 @@
   <meta name="twitter:description" content="Relax and unwind in the heart of Osijek. Jacuzzi, sauna &amp; more. | Opuštanje u srcu Osijeka – jacuzzi, sauna i još mnogo toga.">
 
   <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+
     function loadGA() {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=G-BNQB72GZFG";
-      document.head.appendChild(s);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-
-      gtag('js', new Date());
-      gtag('config', 'G-BNQB72GZFG', { anonymize_ip: true });
+      const gaScript = document.createElement("script");
+      gaScript.async = true;
+      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-BNQB72GZFG";
+      document.head.appendChild(gaScript);
+      gtag("js", new Date());
+      gtag("config", "G-BNQB72GZFG");
     }
 
-    // Check stored preference
-    const consent = localStorage.getItem('cookie-consent');
-    if (consent === 'accepted') {
+    if (localStorage.getItem("kalypso_cookie_consent") === "accepted") {
       loadGA();
     }
   </script>
@@ -49,30 +45,64 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <div id="cookie-banner" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:16px 24px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:none;z-index:9999;font-size:14px;max-width:90%;text-align:center;">
-      <p style="margin-bottom:12px;">We use cookies to improve your experience and to measure website traffic. You can accept or decline.</p>
-      <button id="cookie-accept" style="background:#e75f91;color:white;padding:8px 16px;border:none;border-radius:8px;margin-right:10px;cursor:pointer;">Accept</button>
-      <button id="cookie-decline" style="background:#555;color:white;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;">Decline</button>
+    <div id="cookie-banner" style="
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 420px;
+      background: #fff;
+      padding: 18px 22px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      z-index: 99999;
+      display: none;
+      font-family: sans-serif;
+    ">
+      <p style="font-size: 14px; color: #333; margin-bottom: 12px;">
+        Koristimo kolačiće kako bismo poboljšali vaše iskustvo. Nastavkom korištenja pristajete na upotrebu kolačića.
+      </p>
+      <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <button id="cookie-reject" style="
+          padding: 8px 14px;
+          background: #ccc;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 13px;
+        ">Odbijam</button>
+
+        <button id="cookie-accept" style="
+          padding: 8px 14px;
+          background: #e75f91;
+          color: #fff;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 13px;
+        ">Prihvaćam</button>
+      </div>
     </div>
     <script>
-      const banner = document.getElementById('cookie-banner');
-      const accepted = localStorage.getItem('cookie-consent');
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("cookie-accept");
+      const rejectBtn = document.getElementById("cookie-reject");
 
-      // Show banner only if no choice made
-      if (!accepted) {
-        banner.style.display = 'block';
+      if (!localStorage.getItem("kalypso_cookie_consent")) {
+        banner.style.display = "block";
       }
 
-      document.getElementById('cookie-accept').onclick = function () {
-        localStorage.setItem('cookie-consent', 'accepted');
-        banner.style.display = 'none';
-        loadGA(); // load GA now
-      };
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("kalypso_cookie_consent", "accepted");
+        banner.style.display = "none";
+        loadGA();
+      });
 
-      document.getElementById('cookie-decline').onclick = function () {
-        localStorage.setItem('cookie-consent', 'declined');
-        banner.style.display = 'none';
-      };
+      rejectBtn.addEventListener("click", () => {
+        localStorage.setItem("kalypso_cookie_consent", "rejected");
+        banner.style.display = "none";
+      });
     </script>
   </body>
 </html>
