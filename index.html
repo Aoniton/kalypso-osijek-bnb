@@ -23,86 +23,24 @@
   <meta property="og:description" content="Relax and unwind in the heart of Osijek. Jacuzzi, sauna &amp; more. | Opuštanje u srcu Osijeka – jacuzzi, sauna i još mnogo toga.">
   <meta name="twitter:description" content="Relax and unwind in the heart of Osijek. Jacuzzi, sauna &amp; more. | Opuštanje u srcu Osijeka – jacuzzi, sauna i još mnogo toga.">
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function(){ dataLayer.push(arguments); };
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ window.dataLayer.push(arguments); };
 
-    function loadGA() {
-      const gaScript = document.createElement("script");
-      gaScript.async = true;
-      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-BNQB72GZFG";
-      document.head.appendChild(gaScript);
-      gtag("js", new Date());
-      gtag("config", "G-BNQB72GZFG");
-    }
+      window.loadGA = function() {
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-BNQB72GZFG";
+        document.head.appendChild(s);
 
-    if (localStorage.getItem("kalypso_cookie_consent") === "accepted") {
-      loadGA();
-    }
-  </script>
-</head>
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-BNQB72GZFG');
+      };
+    </script>
+  </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <div id="cookie-banner" style="
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 420px;
-      background: #fff;
-      padding: 18px 22px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      z-index: 99999;
-      display: none;
-      font-family: sans-serif;
-    ">
-      <p style="font-size: 14px; color: #333; margin-bottom: 12px;">
-        Koristimo kolačiće kako bismo poboljšali vaše iskustvo. Nastavkom korištenja pristajete na upotrebu kolačića.
-      </p>
-      <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="cookie-reject" style="
-          padding: 8px 14px;
-          background: #ccc;
-          border: none;
-          border-radius: 6px;
-          cursor: pointer;
-          font-size: 13px;
-        ">Odbijam</button>
-
-        <button id="cookie-accept" style="
-          padding: 8px 14px;
-          background: #e75f91;
-          color: #fff;
-          border: none;
-          border-radius: 6px;
-          cursor: pointer;
-          font-size: 13px;
-        ">Prihvaćam</button>
-      </div>
-    </div>
-    <script>
-      const banner = document.getElementById("cookie-banner");
-      const acceptBtn = document.getElementById("cookie-accept");
-      const rejectBtn = document.getElementById("cookie-reject");
-
-      if (!localStorage.getItem("kalypso_cookie_consent")) {
-        banner.style.display = "block";
-      }
-
-      acceptBtn.addEventListener("click", () => {
-        localStorage.setItem("kalypso_cookie_consent", "accepted");
-        banner.style.display = "none";
-        loadGA();
-      });
-
-      rejectBtn.addEventListener("click", () => {
-        localStorage.setItem("kalypso_cookie_consent", "rejected");
-        banner.style.display = "none";
-      });
-    </script>
   </body>
 </html>

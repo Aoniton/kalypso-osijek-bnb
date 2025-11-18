@@ -15,6 +15,7 @@ import FAQ from "./pages/FAQ";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import BackToTop from "./components/BackToTop";
+import CookieBanner from "./CookieBanner";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -49,6 +50,7 @@ const App = () => (
         </Routes>
         <BackToTop />
       </BrowserRouter>
+      <CookieBanner />
     </TooltipProvider>
   </QueryClientProvider>
 );
