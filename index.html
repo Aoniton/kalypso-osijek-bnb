@@ -18,14 +18,61 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/WS0snxeTWubUoKzBhXEBmuzRhmy2/social-images/social-1759502181253-about-kalypso.jpg">
-    <meta property="og:title" content="Kalypso Osijek – Luxury Wellness Apartment | Luksuzni Wellness Apartman Osijek">
+  <meta property="og:title" content="Kalypso Osijek – Luxury Wellness Apartment | Luksuzni Wellness Apartman Osijek">
   <meta name="twitter:title" content="Kalypso Osijek – Luxury Wellness Apartment | Luksuzni Wellness Apartman Osijek">
   <meta property="og:description" content="Relax and unwind in the heart of Osijek. Jacuzzi, sauna &amp; more. | Opuštanje u srcu Osijeka – jacuzzi, sauna i još mnogo toga.">
   <meta name="twitter:description" content="Relax and unwind in the heart of Osijek. Jacuzzi, sauna &amp; more. | Opuštanje u srcu Osijeka – jacuzzi, sauna i još mnogo toga.">
+
+  <script>
+    function loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-BNQB72GZFG";
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      gtag('js', new Date());
+      gtag('config', 'G-BNQB72GZFG', { anonymize_ip: true });
+    }
+
+    // Check stored preference
+    const consent = localStorage.getItem('cookie-consent');
+    if (consent === 'accepted') {
+      loadGA();
+    }
+  </script>
 </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <div id="cookie-banner" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:16px 24px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.25);display:none;z-index:9999;font-size:14px;max-width:90%;text-align:center;">
+      <p style="margin-bottom:12px;">We use cookies to improve your experience and to measure website traffic. You can accept or decline.</p>
+      <button id="cookie-accept" style="background:#e75f91;color:white;padding:8px 16px;border:none;border-radius:8px;margin-right:10px;cursor:pointer;">Accept</button>
+      <button id="cookie-decline" style="background:#555;color:white;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;">Decline</button>
+    </div>
+    <script>
+      const banner = document.getElementById('cookie-banner');
+      const accepted = localStorage.getItem('cookie-consent');
+
+      // Show banner only if no choice made
+      if (!accepted) {
+        banner.style.display = 'block';
+      }
+
+      document.getElementById('cookie-accept').onclick = function () {
+        localStorage.setItem('cookie-consent', 'accepted');
+        banner.style.display = 'none';
+        loadGA(); // load GA now
+      };
+
+      document.getElementById('cookie-decline').onclick = function () {
+        localStorage.setItem('cookie-consent', 'declined');
+        banner.style.display = 'none';
+      };
+    </script>
   </body>
 </html>
