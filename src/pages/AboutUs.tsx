@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Reviews from "@/components/Reviews";
 import Footer from "@/components/Footer";
@@ -55,6 +56,11 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>About Kalypso Osijek</title>
+        <meta name="description" content="Learn about the story and mission behind Kalypso Osijek." />
+        <link rel="canonical" href="https://apartmankalypso.com/about" />
+      </Helmet>
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
         <section className="py-20 px-4 bg-gradient-elegant">

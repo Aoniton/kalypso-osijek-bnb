@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -132,6 +133,11 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Kalypso Osijek – Frequently Asked Questions</title>
+        <meta name="description" content="Frequently asked questions about Apartment Kalypso Osijek." />
+        <link rel="canonical" href="https://apartmankalypso.com/faq" />
+      </Helmet>
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
         <section className="py-20 px-4 bg-gradient-elegant">

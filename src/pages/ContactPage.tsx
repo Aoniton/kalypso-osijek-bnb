@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -8,6 +9,11 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Contact Kalypso Osijek – Book Your Stay</title>
+        <meta name="description" content="Contact Apartment Kalypso Osijek for booking and inquiries." />
+        <link rel="canonical" href="https://apartmankalypso.com/contact" />
+      </Helmet>
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
         <Contact language={language} />

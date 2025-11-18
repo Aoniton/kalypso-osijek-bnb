@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Features from "@/components/Features";
@@ -27,6 +28,11 @@ const Wellness = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Wellness at Kalypso Osijek – Relax & Recharge</title>
+        <meta name="description" content="Relax and recharge with Kalypso's wellness options in Osijek." />
+        <link rel="canonical" href="https://apartmankalypso.com/wellness" />
+      </Helmet>
       <StructuredData type="wellness" />
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">

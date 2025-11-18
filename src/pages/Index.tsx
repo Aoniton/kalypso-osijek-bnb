@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -16,6 +17,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Kalypso Osijek – Modern Apartment in Croatia</title>
+        <meta name="description" content="Kalypso Osijek offers a modern, fully equipped vacation apartment in the heart of Osijek." />
+        <link rel="canonical" href="https://apartmankalypso.com/" />
+      </Helmet>
       <StructuredData type="home" />
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main>

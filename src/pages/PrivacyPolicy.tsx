@@ -1,8 +1,8 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import { useLanguage } from "@/hooks/useLanguage";
-import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
   const { language, setLanguage } = useLanguage();
@@ -147,9 +147,9 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>{t.title} | Kalypso Luxury Wellness Apartment Osijek</title>
-        <meta name="description" content={t.intro.text} />
-        <meta name="robots" content="noindex, follow" />
+        <title>Privacy Policy – Kalypso Osijek</title>
+        <meta name="description" content="Read the privacy policy for Kalypso Osijek." />
+        <link rel="canonical" href="https://apartmankalypso.com/privacy-policy" />
       </Helmet>
       <StructuredData type="privacy" />
       <div className="min-h-screen bg-background">

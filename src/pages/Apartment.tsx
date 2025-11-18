@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
@@ -59,6 +60,28 @@ const Apartment = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Apartment Kalypso Osijek – Spacious & Modern Stay</title>
+        <meta name="description" content="Explore Apartment Kalypso – a modern, spacious accommodation in Osijek with full amenities and great location." />
+        <link rel="canonical" href="https://apartmankalypso.com/apartment" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LodgingBusiness",
+              "name": "Apartment Kalypso",
+              "image": "https://apartmankalypso.com/placeholder.jpg",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Osijek",
+                "addressCountry": "Croatia"
+              },
+              "url": "https://apartmankalypso.com/apartment",
+              "description": "Modern and fully equipped apartment located in Osijek, Croatia."
+            }
+          `}
+        </script>
+      </Helmet>
       <StructuredData type="apartment" />
       <Navbar language={language} onLanguageChange={setLanguage} />
       <main className="pt-20">
